@@ -323,9 +323,9 @@ function init()
 	// scene.add( sprite2 );
 
 	const geometry = new THREE.SphereGeometry( 50, 32 );
-	const material = new THREE.MeshBasicMaterial( { color: 0x990000 } );
+	const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 	var circle1 = new THREE.Mesh( geometry.clone() , material );
-	circle1.position.set( 1000,0,0);
+	circle1.position.set( 1000,0,0); //array[0]  (x,y,z); 900*3
 	circle1.name = "source 1";
 	scene.add( circle1 );
 	var circle2 = new THREE.Mesh( geometry.clone() , material );
