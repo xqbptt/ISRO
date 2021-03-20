@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ISRO DATA VISUALISER - IITG</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel="stylesheet" href="../static/css/styles.css" />
+  </head>
+  <body>
+    <script src="../static/js/Three.js"></script>
+    <script src="../static/js/Detector.js"></script>
+    <script src="../static/js/Stats.js"></script>
+    <script src="../static/js/OrbitControls.js"></script>
+    <script src="../static/js/THREEx.KeyboardState.js"></script>
+    <script src="../static/js/THREEx.FullScreen.js"></script>
+    <script src="../static/js/THREEx.WindowResize.js"></script>
+
+    <div
+      id="ThreeJS"
+      class="container-threejs"
+    ></div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="text">Some text in the Modal..</p>
+      </div>
+    </div>
+    <script>
+
+      //////////
+      // MAIN //
+      //////////
+
+      // standard global variables
+      var container, scene, camera, renderer, controls, stats;
+      // var keyboard = new THREEx.KeyboardState();
+      var clock = new THREE.Clock();
+
+      // custom global variables
+      var cube;
+      var projector,
+        mouse = { x: 0, y: 0 },
+        INTERSECTED;
+      var sprite1;
+      var targetList = [];
+      var canvas1, context1, texture1;
+
+      // initialization
+      init();
+
+      // animation loop / game loop
+      animate();
+
+      ///////////////
+      // FUNCTIONS //
+      ///////////////
+
+      function init() {
+        ///////////
+        // SCENE //
+        ///////////
+        scene = new THREE.Scene();
+
+        ////////////
+        // CAMERA //
+        ////////////
+
+        var SCREEN_WIDTH = window.innerWidth,
+          SCREEN_HEIGHT = window.innerHeight;
+        // camera attributes
+        var VIEW_ANGLE = 45,
+          ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT,
+          NEAR = 0.1,
+          FAR = 20000;
+        // set up camera
+        camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
+        // add the camera to the scene
+        scene.add(camera);
+        // the camera defaults to position (0,0,0)
+        // so pull it back (z = 400) and up (y = 100) and set the angle towards the scene origin
+        camera.position.set(0, 300, 800);
+        camera.lookAt(scene.position);
+
+        //////////////
+        // RENDERER //
+        //////////////
+
+        // create and start the renderer; choose antialias setting.
+        if (Detector.webgl)
+          renderer = new THREE.WebGLRenderer({ antialias: true });
+        else renderer = new THREE.CanvasRenderer();
+
+        renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+
+        // attach div element to variable to contain the renderer
+        container = document.getElementById("ThreeJS");
+
+        // attach renderer to the container div
+        container.appendChild(renderer.domElement);
+
+        ////////////
+        // EVENTS //
+        ////////////
+
+        //////////////
+        // CONTROLS //
+        //////////////
+
+        // move mouse and: left   click to rotate,
+        //                 middle click to zoom,
+        //                 right  click to pan
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+        ///////////
+        // STATS //
+        ///////////
+
+        // displays current and past frames per second attained by scene
+        stats = new Stats();
+        stats.domElement.style.position = "absolute";
+        stats.domElement.style.bottom = "0px";
+        stats.domElement.style.zIndex = 100;
+        container.appendChild(stats.domElement);
+
+        /////////
+        // SKY //
+        /////////
+
+        // recommend either a skybox or fog effect (can't use both at the same time)
+        // without one of these, the scene's background color is determined by webpage background
+
+        // make sure the camera's "far" value is large enough so that it will render the skyBox!
+        var skyBoxGeometry = new THREE.CubeGeometry(10000, 10000, 10000);
+        // BackSide: render faces from inside of the cube, instead of from outside (default).
+        var skyBoxMaterial = new THREE.MeshBasicMaterial({
+          color: 0x9999ff,
+          side: THREE.BackSide,
+        });
+        var skyBox = new THREE.Mesh(skyBoxGeometry, skyBoxMaterial);
+        scene.add(skyBox);
+
+        // fog must be added to scene before first render
+        scene.fog = new THREE.FogExp2(0x000000, 0.00025);
+
+        //wireframe sphere
+        var sphereGeom = new THREE.SphereGeometry(1000, 32, 16);
+
+        // Basic wireframe materials.
+        var darkMaterial = new THREE.MeshBasicMaterial({ color: 0x000088 });
+        var wireframeMaterial = new THREE.MeshBasicMaterial({
+          color: 0xffffff,
+          wireframe: true,
+          transparent: true,
+        });
+        var multiMaterial = [darkMaterial, wireframeMaterial];
+
+        // Creating three spheres to illustrate wireframes.
+        var sphere = new THREE.Mesh(sphereGeom.clone(), wireframeMaterial);
+        sphere.position.set(0, 0, 0);
+        sphere.name = "base";
+        scene.add(sphere);
+
+        var ballTexture = THREE.ImageUtils.loadTexture("images/redball.png");
+        var crateTexture = THREE.ImageUtils.loadTexture("images/crate.png");
+
+        var crateMaterial = new THREE.SpriteMaterial({
+          map: crateTexture,
+          useScreenCoordinates: false,
+          color: 0xff0000,
+        });
+
+        const geometry = new THREE.SphereGeometry(50, 32);
+        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        var circle1 = new THREE.Mesh(geometry.clone(), material);
+        circle1.position.set(1000, 0, 0); //array[0]  (x,y,z); 900*3
+        circle1.name = "source 1";
+        scene.add(circle1);
+        var circle2 = new THREE.Mesh(geometry.clone(), material);
+        circle2.position.set(0, 1000, 0);
+        circle2.name = "source 2";
+        scene.add(circle2);
+        var circle3 = new THREE.Mesh(geometry.clone(), material);
+        circle3.position.set(0, 0, 1000);
+        circle3.name = "source 3";
+        scene.add(circle3);
+        targetList.push(circle1);
+        targetList.push(circle2);
+        targetList.push(circle3);
+
+        projector = new THREE.Projector();
+        document.addEventListener("mousedown", onDocumentMouseDown, false);
+        // when the mouse moves, call the given function
+        document.addEventListener("mousemove", onDocumentMouseMove, false);
+
+        /////// draw text on canvas /////////
+
+        // create a canvas element
+        canvas1 = document.createElement("canvas");
+        context1 = canvas1.getContext("2d");
+        context1.font = "Bold 20px Arial";
+        context1.fillStyle = "rgba(0,0,0,0.95)";
+        context1.fillText("Hello, world!", 0, 20);
+
+        // canvas contents will be used for a texture
+        texture1 = new THREE.Texture(canvas1);
+        texture1.needsUpdate = true;
+
+        ////////////////////////////////////////
+
+        var spriteMaterial = new THREE.SpriteMaterial({
+          map: texture1,
+          useScreenCoordinates: true,
+          alignment: THREE.SpriteAlignment.topLeft,
+        });
+
+        sprite1 = new THREE.Sprite(spriteMaterial);
+        sprite1.scale.set(200, 100, 1.0);
+        sprite1.position.set(50, 50, 0);
+        scene.add(sprite1);
+
+        //////////////////////////////////////////
+      }
+
+      function animate() {
+        requestAnimationFrame(animate);
+        render();
+        update();
+      }
+      function onDocumentMouseDown(event) {
+        // the following line would stop any other event handler from firing
+        // (such as the mouse's TrackballControls)
+        event.preventDefault();
+
+        console.log("Click.");
+
+        // update the mouse variable
+        mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+        mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+        // find intersections
+
+        // create a Ray with origin at the mouse position
+        //   and direction into the scene (camera direction)
+        var vector = new THREE.Vector3(mouse.x, mouse.y, 1);
+        projector.unprojectVector(vector, camera);
+        var ray = new THREE.Raycaster(
+          camera.position,
+          vector.sub(camera.position).normalize()
+        );
+
+        // create an array containing all objects in the scene with which the ray intersects
+        var intersects = ray.intersectObjects(targetList);
+
+        // if there is one (or more) intersections
+        if (intersects.length > 0) {
+          var intersected_object = intersects[0];
+          console.log("Hit @ " + toString(intersects[0].point));
+          if (intersected_object.object.name) {
+            if (intersected_object.object.name != "base") {
+              var modal = document.getElementById("myModal");
+              var span = document.getElementsByClassName("close")[0];
+              var displayText = document.getElementById("text");
+              displayText.innerHTML =
+                "Publications related to " + intersected_object.object.name;
+              modal.style.display = "block";
+              span.onclick = function () {
+                modal.style.display = "none";
+              };
+              window.onclick = function (event) {
+                if (event.target == modal) {
+                  modal.style.display = "none";
+                }
+              };
+            }
+          }
+          // change the color of the closest face.
+          intersects[0].object.geometry.colorsNeedUpdate = true;
+        }
+      }
+
+      function toString(v) {
+        return "[ " + v.x + ", " + v.y + ", " + v.z + " ]";
+      }
+
+      function onDocumentMouseMove(event) {
+        // the following line would stop any other event handler from firing
+        // (such as the mouse's TrackballControls)
+        event.preventDefault();
+
+        // update sprite position
+        sprite1.position.set(event.clientX, event.clientY - 20, 0);
+
+        // update the mouse variable
+        mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+        mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+      }
+
+      function update() {
+        // create a Ray with origin at the mouse position
+        //   and direction into the scene (camera direction)
+        var vector = new THREE.Vector3(mouse.x, mouse.y, 1);
+        projector.unprojectVector(vector, camera);
+        var ray = new THREE.Raycaster(
+          camera.position,
+          vector.sub(camera.position).normalize()
+        );
+
+        // create an array containing all objects in the scene with which the ray intersects
+        var intersects = ray.intersectObjects(scene.children);
+
+        // INTERSECTED = the object in the scene currently closest to the camera
+        //		and intersected by the Ray projected from the mouse position
+
+        // if there is one (or more) intersections
+        if (intersects.length > 0) {
+          // if the closest object intersected is not the currently stored intersection object
+          if (intersects[0].object != INTERSECTED) {
+            // restore previous intersection object (if it exists) to its original color
+            if (INTERSECTED)
+              INTERSECTED.material.color.setHex(INTERSECTED.currentHex);
+            // store reference to closest object as current intersection object
+            INTERSECTED = intersects[0].object;
+            // store color of closest object (for later restoration)
+            INTERSECTED.currentHex = INTERSECTED.material.color.getHex();
+            // set a new color for closest object
+            INTERSECTED.material.color.setHex(0xff0000);
+
+            // update text, if it has a "name" field.
+            if (intersects[0].object.name) {
+              if (intersects[0].object.name == "base") {
+                INTERSECTED.material.color.setHex(INTERSECTED.currentHex);
+                context1.clearRect(0, 0, 300, 300);
+                texture1.needsUpdate = true;
+              } else {
+                context1.clearRect(0, 0, 640, 480);
+                var message = intersects[0].object.name;
+                var metrics = context1.measureText(message);
+                var width = metrics.width;
+                context1.fillStyle = "rgba(0,0,0,0.95)"; // black border
+                context1.fillRect(0, 0, width + 8, 20 + 8);
+                context1.fillStyle = "rgba(255,255,255,0.95)"; // white filler
+                context1.fillRect(2, 2, width + 4, 20 + 4);
+                context1.fillStyle = "rgba(0,0,0,1)"; // text color
+                context1.fillText(message, 4, 20);
+                texture1.needsUpdate = true;
+              }
+            } else {
+              context1.clearRect(0, 0, 300, 300);
+              texture1.needsUpdate = true;
+            }
+          }
+        } // there are no intersections
+        else {
+          // restore previous intersection object (if it exists) to its original color
+          if (INTERSECTED)
+            INTERSECTED.material.color.setHex(INTERSECTED.currentHex);
+          // remove previous intersection object reference
+          // by setting current intersection object to "nothing"
+          INTERSECTED = null;
+          context1.clearRect(0, 0, 300, 300);
+          texture1.needsUpdate = true;
+        }
+
+        controls.update();
+        stats.update();
+      }
+
+      function render() {
+        renderer.render(scene, camera);
+      }
+    </script>
+  </body>
+</html>
