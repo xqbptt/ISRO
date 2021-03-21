@@ -20,6 +20,13 @@ import {PointerLockControls} from "three/examples/jsm/controls/PointerLockContro
  let targetList = [];
  let intersected;
 
+  /**
+  * ToolTip
+  */
+let tooltip = document.getElementById("tooltip")
+tooltip.style.display = "none"
+
+
  window.addEventListener( 'mousemove', (event)=>{
      // calculate mouse position in normalized device coordinates
 	// (-1 to +1) for both components
@@ -41,24 +48,19 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 // scene.add(axesHelper);
 
+const textureLoader = new THREE.TextureLoader();
+const colorTexture = textureLoader.load(
+  "/textures/base/Marble_Blue_004_basecolor.jpg"
+);
+const ambientOcclusion = textureLoader.load(
+  "/textures/base/Marble_Blue_004_ambientOcclusion.jpg"
+);
 
-/**
- * Texture
- */
-
-// const textureLoader = new THREE.TextureLoader()
-// const texture = textureLoader.load("/textures/base/Marble_Blue_004_basecolor.jpg",
-// ()=>{
-//     console.log('load')
-// },
-// ()=>{
-//     console.log('progress')
-// },
-// ()=>{
-//     conso
-// }
-// )
-
+const height = textureLoader.load("/textures/base/Marble_Blue_004_height.png");
+const normal = textureLoader.load("/textures/base/Marble_Blue_004_normal.jpg");
+const roughness = textureLoader.load(
+  "/textures/base/Marble_Blue_004_roughness.jpg"
+);
 
 /**
  * Base
@@ -72,8 +74,39 @@ let sphereGeom =  new THREE.SphereGeometry( radius, 64 , 64 )
 // Basic wireframe materials
 let wireframeMaterial = new THREE.MeshNormalMaterial( {  wireframe: true } )
 
+const planetMaterial = new THREE.MeshStandardMaterial({
+  map: colorTexture,
+  aoMap: ambientOcclusion,
+  roughnessMap: roughness,
+  normalMap: normal,
+  //   envMap: height,
+  //   roughness: 0.5,
+  //   metalness: 0.0,
+  transparent: true,
+  wireframe: true,
+});
+
+planetMaterial.side = THREE.DoubleSide;
+// planetMaterial.wireframe = true;
+
+/**
+ * Light
+ */
+const ambientLight = new THREE.AmbientLight(0xffffff, 2);
+scene.add(ambientLight);
+
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0.3);
+directionalLight.position.set(0.5, 0, 1);
+scene.add(directionalLight);
+
+const pointLight = new THREE.PointLight(0xffffff, 0.5);
+pointLight.position.x = 0;
+pointLight.position.y = 0;
+pointLight.position.z = 40000;
+scene.add(pointLight);
+
 // Creating three spheres to illustrate wireframes.
-let sphere = new THREE.Mesh( sphereGeom, wireframeMaterial )
+let sphere = new THREE.Mesh( sphereGeom, planetMaterial )
  sphere.position.set(0, 0, 0);
 sphere.name = "base";
 scene.add( sphere );
@@ -206,11 +239,6 @@ controls.enableDamping = true;
 
  }
 
- /**
-  * ToolTip
-  */
-let tooltip = document.getElementById("tooltip")
-tooltip.style.display = "none"
 
 /**
  * Mouse Click
@@ -252,8 +280,6 @@ document.addEventListener('click', (event) => {
  */
 const toggleButton = document.getElementById("center")
 toggleButton.onclick = ()=>{
-    console.log(camera.position)
-    console.log(scene.position)
     if(camera.position.x > 20 || camera.position.y > 20 || camera.position.z > 20) {
         //camera.position.set(0,0,1);
         gsap.to(camera.position, { duration: 1, delay: 0, x: 0,y: 0,z: 10 })
@@ -269,7 +295,8 @@ toggleButton.onclick = ()=>{
  * Renderer
  */
 const renderer = new THREE.WebGLRenderer({
-    canvas: canvas
+    canvas: canvas,
+    antialias:true
 })
 renderer.setSize(sizes.width, sizes.height)
 
