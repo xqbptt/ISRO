@@ -3,6 +3,7 @@ import * as THREE from 'three'
 import gsap from 'gsap'
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js"
 import {FirstPersonControls} from "three/examples/jsm/controls/FirstPersonControls.js"
+import {PointerLockControls} from "three/examples/jsm/controls/PointerLockControls.js"
 /**
  * Axes heloper
  */
@@ -253,12 +254,14 @@ const toggleButton = document.getElementById("center")
 toggleButton.onclick = ()=>{
     console.log(camera.position)
     console.log(scene.position)
-    if(camera.position.x != 0 && camera.position.y != 0 && camera.position.z != 0) {
-        camera.position.set(0,0,0);
-        camera.lookAt(300,300,300);
+    if(camera.position.x > 20 || camera.position.y > 20 || camera.position.z > 20) {
+        //camera.position.set(0,0,1);
+        gsap.to(camera.position, { duration: 1, delay: 0, x: 0,y: 0,z: 10 })
+        //camera.lookAt(300,300,300);
     }
     else {
-        camera.position.set(0,300,radius+radius)
+        //camera.position.set(0,300,radius+radius)
+        gsap.to(camera.position, { duration: 1, delay: 0, x: 0,y: 300,z: 2*radius })
     }
        
 }
