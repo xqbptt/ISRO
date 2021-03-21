@@ -22,7 +22,7 @@ import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js"
  window.addEventListener( 'mousemove', (event)=>{
      // calculate mouse position in normalized device coordinates
 	// (-1 to +1) for both components
-    sprite1.position.set( event.clientX, event.clientY, 0 );
+    //sprite1.position.set( event.clientX, event.clientY, 0 );
 	mouse.x = ( event.clientX / sizes.width ) * 2 - 1;
 	mouse.y = - ( event.clientY / sizes.height ) * 2 + 1;
  }, false );
@@ -234,8 +234,8 @@ controls.enableDamping = true;
 
  /**
   * ToolTip
-//   */
-//   let tooltip = document.createElement('p');
+  */
+//   canvas1 = document.createElement('canvas');
 //   canvas1.width = 1000
 //   canvas1.height = 1000
 //   let context1 = canvas1.getContext('2d');
@@ -312,7 +312,7 @@ const tick = () =>
 			{
                 console.log(intersected.name)
                 gsap.to(intersected.scale, { duration: .5, delay: 0, x: 2,y: 2,z: 2 })
-
+                sprite1.position.set(intersected.position.x-100, intersected.position.y-100, intersected.position.z-100 )
 			}
 			else
 			{
