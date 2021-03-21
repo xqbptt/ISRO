@@ -7,7 +7,7 @@ import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js"
  * Axes heloper
  */
 
- const axesHelper = new THREE.AxesHelper(600);
+//  const axesHelper = new THREE.AxesHelper(600);
  
 
 /**
@@ -38,7 +38,7 @@ const canvas = document.querySelector('canvas.webgl')
 
 // Scene
 const scene = new THREE.Scene()
-scene.add(axesHelper);
+// scene.add(axesHelper);
 
 
 /**
