@@ -40,6 +40,25 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 scene.add(axesHelper);
 
+
+/**
+ * Texture
+ */
+
+// const textureLoader = new THREE.TextureLoader()
+// const texture = textureLoader.load("/textures/base/Marble_Blue_004_basecolor.jpg",
+// ()=>{
+//     console.log('load')
+// },
+// ()=>{
+//     console.log('progress')
+// },
+// ()=>{
+//     conso
+// }
+// )
+
+
 /**
  * Base
  */
@@ -201,8 +220,34 @@ tooltip.style.display = "none"
  * Mouse Click
  */
 console.log("adding event listener")
-window.addEventListener('mousedown', (event) => {
-    console.log("click")
+document.addEventListener('click', (event) => {
+    console.log("Click.");
+	// update the mouse variable
+	mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+	mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+	// find intersections
+    raycaster.setFromCamera( mouse, camera );
+    const intersects = raycaster.intersectObjects( targetList );
+    if(intersects.length>0){
+        let intersected_object = intersects[0];
+        console.log("Hit " );
+        if ( intersected_object.object.name )
+        {
+            let modal = document.getElementById("myModal");
+            let span = document.getElementsByClassName("close")[0];
+            let displayText = document.getElementById("text");
+            displayText.innerHTML = "Publications related to " + intersected_object.object.name;
+            modal.style.display = "block";
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+	}
 }, false );
 
 /**
@@ -256,9 +301,9 @@ const tick = () =>
 			if ( intersects[ 0 ].object.name )
 			{
                 console.log(intersected.name)
+                gsap.to(intersected.scale, { duration: .5, delay: 0, x: 2,y: 2,z: 2 })
                 tooltip.innerHTML = intersected.name
                 tooltip.style.display = "block"
-                gsap.to(intersected.scale, { duration: .5, delay: 0, x: 2,y: 2,z: 2 })
             }
 			else
 			{
