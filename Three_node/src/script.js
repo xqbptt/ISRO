@@ -22,7 +22,8 @@ import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js"
  window.addEventListener( 'mousemove', (event)=>{
      // calculate mouse position in normalized device coordinates
 	// (-1 to +1) for both components
-    //sprite1.position.set( event.clientX, event.clientY, 0 );
+    tooltip.style.top = (event.clientY-30) + "px";
+    tooltip.style.left = (event.clientX-30) + "px";
 	mouse.x = ( event.clientX / sizes.width ) * 2 - 1;
 	mouse.y = - ( event.clientY / sizes.height ) * 2 + 1;
  }, false );
@@ -133,7 +134,7 @@ controls.enableDamping = true;
 /**
  * Stars in background
  */
- const r = radius/2, starsGeometry = [ new THREE.BufferGeometry(), new THREE.BufferGeometry() ];
+ const r = radius/4, starsGeometry = [ new THREE.BufferGeometry(), new THREE.BufferGeometry() ];
 
  const vertices1 = [];
  const vertices2 = [];
@@ -190,76 +191,19 @@ controls.enableDamping = true;
 
  }
 
-
- //stackoverflow answer
-
-
- function roundRect(ctx, x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.lineTo(x + w - r, y); ctx.quadraticCurveTo(x + w, y, x + w, y + r); ctx.lineTo(x + w, y + h - r); ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h); ctx.lineTo(x + r, y + h); ctx.quadraticCurveTo(x, y + h, x, y + h - r); ctx.lineTo(x, y + r); ctx.quadraticCurveTo(x, y, x + r, y); ctx.closePath(); ctx.fill(); ctx.stroke(); }
-
- function makeTextSprite( message, parameters )
-    {
-        if ( parameters === undefined ) parameters = {};
-        let fontface = parameters.hasOwnProperty("fontface") ? parameters["fontface"] : "Arial";
-        let fontsize = parameters.hasOwnProperty("fontsize") ? parameters["fontsize"] : 144;
-        let borderThickness = parameters.hasOwnProperty("borderThickness") ? parameters["borderThickness"] : 4;
-        let borderColor = parameters.hasOwnProperty("borderColor") ?parameters["borderColor"] : { r:0, g:0, b:0, a:1.0 };
-        let backgroundColor = parameters.hasOwnProperty("backgroundColor") ?parameters["backgroundColor"] : { r:255, g:255, b:255, a:1.0 };
-        let textColor = parameters.hasOwnProperty("textColor") ?parameters["textColor"] : { r:0, g:0, b:0, a:1.0 };
-
-        let canvas = document.createElement('canvas');
-        let context = canvas.getContext('2d');
-        context.font = "Bold " + fontsize + "px " + fontface;
-        let metrics = context.measureText( message );
-        let textWidth = metrics.width;
-
-        context.fillStyle   = "rgba(" + backgroundColor.r + "," + backgroundColor.g + "," + backgroundColor.b + "," + backgroundColor.a + ")";
-        context.strokeStyle = "rgba(" + borderColor.r + "," + borderColor.g + "," + borderColor.b + "," + borderColor.a + ")";
-
-        context.lineWidth = borderThickness;
-        roundRect(context, borderThickness/2, borderThickness/2, (textWidth + borderThickness) * 1.1, fontsize * 1.4 + borderThickness, 8);
-
-        context.fillStyle = "rgba("+textColor.r+", "+textColor.g+", "+textColor.b+", 1.0)";
-        context.fillText( message, borderThickness, fontsize + borderThickness);
-
-        let texture = new THREE.Texture(canvas)
-        texture.needsUpdate = true;
-
-        let spriteMaterial = new THREE.SpriteMaterial( { map: texture, useScreenCoordinates: false } );
-        let sprite = new THREE.Sprite( spriteMaterial );
-        sprite.scale.set(0.5 * fontsize, 0.25 * fontsize, 0.75 * fontsize);
-        return sprite;
-    }
-
- // #end of the anser
-
  /**
   * ToolTip
   */
-//   canvas1 = document.createElement('canvas');
-//   canvas1.width = 1000
-//   canvas1.height = 1000
-//   let context1 = canvas1.getContext('2d');
-//   context1.font = "Bold 20px Arial";
-//   context1.fillStyle = "rgba(0,0,0,0.95)";
-//   context1.fillText('Hello, world!', 0, 20);
+let tooltip = document.getElementById("tooltip")
+tooltip.style.display = "none"
 
-//   // canvas contents will be used for a texture
-//   let texture1 = new THREE.Texture(canvas1) 
-//   texture1.needsUpdate = true;
-
-//   ////////////////////////////////////////
-
-//   let spriteMaterial = new THREE.SpriteMaterial( { map: texture1 } );
-
-//   let sprite1 = new THREE.Sprite( spriteMaterial );
-//   sprite1.scale.set(200,100,1.0);
-//   sprite1.position.set( 50, 50, 0 );
-
-
-
-const sprite1 =  makeTextSprite("this is a message",{} )
-   scene.add( sprite1 );
-
+/**
+ * Mouse Click
+ */
+console.log("adding event listener")
+window.addEventListener('mousedown', (event) => {
+    console.log("click")
+}, false );
 
 /**
  * Renderer
@@ -301,6 +245,7 @@ const tick = () =>
 			if ( intersected )
 				{
                     intersected.scale.set( 1,1,1 );
+                    tooltip.style.display = "none"
                 }
 			// store reference to closest object as current intersection object
 			intersected = intersects[ 0 ].object;
@@ -311,12 +256,14 @@ const tick = () =>
 			if ( intersects[ 0 ].object.name )
 			{
                 console.log(intersected.name)
+                tooltip.innerHTML = intersected.name
+                tooltip.style.display = "block"
                 gsap.to(intersected.scale, { duration: .5, delay: 0, x: 2,y: 2,z: 2 })
-                sprite1.position.set(intersected.position.x-100, intersected.position.y-100, intersected.position.z-100 )
-			}
+            }
 			else
 			{
                 gsap.to(intersected.scale, { duration: .3, delay: 0, x: 1,y: 1,z: 1 })
+                tooltip.style.display = "none"
             }
 		}
 	}
@@ -326,6 +273,7 @@ const tick = () =>
 		if ( intersected )
         {
             gsap.to(intersected.scale, { duration: .3, delay: 0, x: 1,y: 1,z: 1 })
+            tooltip.style.display = "none"
         }
 		// remove previous intersection object reference
 		//     by setting current intersection object to "nothing"
