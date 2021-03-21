@@ -2,7 +2,7 @@ import './style.css'
 import * as THREE from 'three'
 import gsap from 'gsap'
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js"
-
+import {FirstPersonControls} from "three/examples/jsm/controls/FirstPersonControls.js"
 /**
  * Axes heloper
  */
@@ -127,11 +127,6 @@ const sizes = {
 /**
  * Camera
  */
-// const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height)
-// camera.position.z = 3
-// scene.add(camera)
-
-// var SCREEN_WIDTH = 400, SCREEN_HEIGHT = 300;
 // camera attributes
 const viewAngle = 45, aspect = sizes.width / sizes.height, near = 0.1, far = 500000
 // set up camera
@@ -250,6 +245,23 @@ document.addEventListener('click', (event) => {
 	}
 }, false );
 
+
+/**
+ * Toggle View
+ */
+const toggleButton = document.getElementById("center")
+toggleButton.onclick = ()=>{
+    console.log(camera.position)
+    console.log(scene.position)
+    if(camera.position.x != 0 && camera.position.y != 0 && camera.position.z != 0) {
+        camera.position.set(0,0,0);
+        camera.lookAt(300,300,300);
+    }
+    else {
+        camera.position.set(0,300,radius+radius)
+    }
+       
+}
 /**
  * Renderer
  */

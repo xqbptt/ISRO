@@ -38,7 +38,12 @@ body{
   /* #labels>div:hover {
     color: red;
   } */
-
+  /* TOGGLE BUTTON */
+  #center {
+    position: absolute;  /* let us position them inside the container */
+    left: 0;             /* make their default position the top left of the container */
+    top: 0;
+  }
   /* MODAL STYLING IS HERE */
   .modal {
     display: none; /* Hidden by default */
