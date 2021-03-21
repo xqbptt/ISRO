@@ -2,8 +2,10 @@
   "name": "isro-visualization-tool",
   "version": "1.0.0",
   "description": "tool for visualizing objects like stars",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
+    "production": "pm2 start app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,5 +13,8 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
