@@ -1,5 +1,5 @@
 exports.landingPage = (req, res) => {
-  res.render("index");
+  res.render("landingPage/landingPage");
 };
 
 exports.adminLogin = (req, res) => {

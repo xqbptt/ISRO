@@ -22,7 +22,7 @@ const toolRoutes = require("./routes/toolRoutes");
 /**
  * middlewares
  */
-app.use(express.static("static"));
+app.use('/assets', express.static('assets'));
 app.use("/", landingPageRoutes);
 app.use("/visualization", toolRoutes);
 

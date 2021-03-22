@@ -1,9 +1,6 @@
 exports.toolController = (req, res) => {
-  const toolNo = req.params.visualizerName;
-  const vizNo = {
-    1: "One",
-    2: "Two",
-    3: "Three",
-  };
-  res.render(`visualizer${vizNo[toolNo]}`);
+  const toolNo = req.params.type;
+  if(toolNo)
+    res.render(`visualizer${toolNo}`);
+  res.render('visualizerall')
 };
