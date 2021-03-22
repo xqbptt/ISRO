@@ -4,94 +4,102 @@ import gsap from 'gsap'
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js"
 import {FirstPersonControls} from "three/examples/jsm/controls/FirstPersonControls.js"
 import {PointerLockControls} from "three/examples/jsm/controls/PointerLockControls.js"
-/**
- * Axes heloper
+
+ const request = async () => {
+ /**
+ * Open JSON file
  */
-
-//  const axesHelper = new THREE.AxesHelper(600);
- 
-
+const response1 = await fetch("json_data/high_energy_sources.json");
+const high_energy_json = await response1.json()
+const response2 = await fetch("json_data/low_energy_sources.json");
+const low_energy_json = await response2.json()
+console.log(high_energy_json.length);
+    
 /**
  * Mouse variables
  */
-
  const raycaster = new THREE.Raycaster();
  const mouse = new THREE.Vector2();
- let targetList = [];
+ let targetListAll = [];
+ let targetListObserved = [];
  let intersected;
 
-  /**
-  * ToolTip
-  */
+/**
+ * ToolTip
+ */
 let tooltip = document.getElementById("tooltip")
 tooltip.style.display = "none"
 
 
- window.addEventListener( 'mousemove', (event)=>{
+window.addEventListener( 'mousemove', (event)=>{
      // calculate mouse position in normalized device coordinates
 	// (-1 to +1) for both components
     tooltip.style.top = (event.clientY-30) + "px";
     tooltip.style.left = (event.clientX-30) + "px";
 	mouse.x = ( event.clientX / sizes.width ) * 2 - 1;
 	mouse.y = - ( event.clientY / sizes.height ) * 2 + 1;
- }, false );
+}, false );
 
 
-const radius = 10000
-/**
- * Base
- */
+
+const radius = 5000 //radius of the celestial sphere
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
 
 // Scene
 const scene = new THREE.Scene()
+// scene.background = new THREE.CubeTextureLoader()
+// 	.setPath( 'textures/cubeMaps/' )
+// 	.load( [
+// 		'px.png',
+// 		'nx.png',
+// 		'py.png',
+// 		'ny.png',
+// 		'pz.png',
+// 		'nz.png'
+// 	] );
 // scene.add(axesHelper);
 
-const textureLoader = new THREE.TextureLoader();
-const colorTexture = textureLoader.load(
-  "/textures/base/Marble_Blue_004_basecolor.jpg"
-);
-const ambientOcclusion = textureLoader.load(
-  "/textures/base/Marble_Blue_004_ambientOcclusion.jpg"
-);
-
-const height = textureLoader.load("/textures/base/Marble_Blue_004_height.png");
-const normal = textureLoader.load("/textures/base/Marble_Blue_004_normal.jpg");
-const roughness = textureLoader.load(
-  "/textures/base/Marble_Blue_004_roughness.jpg"
-);
-
 /**
- * Base
+ * Celestial Sphere
  */
-// const geometry = new THREE.BoxGeometry(1, 1, 1)
-// const material = new THREE.MeshBasicMaterial({ color: 0xff0000 })
-// const mesh = new THREE.Mesh(geometry, material)
+const textureLoader = new THREE.TextureLoader();
+// base celestial sphere
+let sphereGeom =  new THREE.SphereGeometry( radius, 128 , 128 )
+// Basic wireframe material
+let wireframeMaterial = new THREE.MeshNormalMaterial( { color: 0x000077, transparent: true, opacity: 0.5,  wireframe: true } )
+let sphere = new THREE.Mesh( sphereGeom, wireframeMaterial ) //keeping it wireframe for now
+sphere.name = "base";
+scene.add( sphere );
+//Earth material
+const materialNormalMap = new THREE.MeshPhongMaterial( {
 
-// base sphere
-let sphereGeom =  new THREE.SphereGeometry( radius, 64 , 64 )
-// Basic wireframe materials
-let wireframeMaterial = new THREE.MeshNormalMaterial( {  wireframe: true } )
+    specular: 0x333333,
+    shininess: 15,
+    map: textureLoader.load( "textures/planet/earth_atmos_4096.jpg" ),
+    specularMap: textureLoader.load( "textures/planet/earth_specular_2048.jpg" ),
+    lightMap: textureLoader.load( "textures/planet/earth_lights_2048.jpg" ),
+    wireframe: true,
+    transparent: true,
+    opacity: 0.25,
+    // y scale is negated to compensate for normal map handedness.
+    normalScale: new THREE.Vector2( 0.85, - 0.85 )
 
-const planetMaterial = new THREE.MeshStandardMaterial({
-  map: colorTexture,
-  aoMap: ambientOcclusion,
-  roughnessMap: roughness,
-  normalMap: normal,
-  //   envMap: height,
-  //   roughness: 0.5,
-  //   metalness: 0.0,
-  transparent: true,
-  wireframe: true,
-});
+} );
+// geometry of earth sphere which is a little bit smaller than outer sphere, so that they dont overlap
+const geometry = new THREE.SphereGeometry( radius, 128, 128 );
 
-planetMaterial.side = THREE.DoubleSide;
-// planetMaterial.wireframe = true;
+let meshPlanet = new THREE.Mesh( geometry, materialNormalMap );
+scene.add( meshPlanet );
+
 
 /**
  * Light
  */
+const dirLight = new THREE.DirectionalLight( 0xffffff );
+dirLight.position.set( - 1, 0, 1 ).normalize();
+scene.add( dirLight );
+
 const ambientLight = new THREE.AmbientLight(0xffffff, 2);
 scene.add(ambientLight);
 
@@ -105,50 +113,41 @@ pointLight.position.y = 0;
 pointLight.position.z = 40000;
 scene.add(pointLight);
 
-// Creating three spheres to illustrate wireframes.
-let sphere = new THREE.Mesh( sphereGeom, planetMaterial )
- sphere.position.set(0, 0, 0);
-sphere.name = "base";
-scene.add( sphere );
-
 //scene.add(mesh)
 
 /**
  * Stars
  */
 
- const vertices = [
-{    x:radius-10,
-    y:0,
-    z:0,
-},
-{x:0,
-y:radius-10,
-z:0,
-},
-{x:0,
-y:0,
-z:radius-10,
-},
-{x:0,
-y:-radius-10,
-z:0,
-},
- ];
-
- const geometry = new THREE.SphereGeometry( 50, 32 )
- const material = new THREE.MeshBasicMaterial( { color: 0xffffff } )
-
-vertices.forEach(({x, y, z}, i)=>{
+ const geometryObserved = new THREE.SphereGeometry( 20, 8 )
+ const geometryNotObserved = new THREE.SphereGeometry( 15, 8 )
+ const materialObserved = new THREE.MeshBasicMaterial( { color: 0x009900 } )
+ const materialNotObserved = new THREE.MeshBasicMaterial( { color: 0x000099 } )
+console.log(high_energy_json)
+for(let i = 0; i<high_energy_json.length; i = i+1)
+{
     // console.log({x, y, z});
     // console.log(i);
-    let star = new THREE.Mesh( geometry , material )
-    star.position.set( x,y,z)
-    star.name = `source_${i}`
-    targetList.push(star)
-    console.log(star.name)
+    console.log(high_energy_json[i])
+    let star;
+    if(high_energy_json[i]["ISRO Observed"] == "True")
+        star = new THREE.Mesh( geometryObserved , materialObserved )
+    else
+        star = new THREE.Mesh( geometryNotObserved , materialNotObserved )
+    console.log(high_energy_json[i]["x"])
+    star.position.set( radius*parseFloat(high_energy_json[i]["x"]),radius*parseFloat(high_energy_json[i]["y"]),radius*parseFloat(high_energy_json[i]["z"]))
+    star.name = high_energy_json[i]["Name"]
+    star.ID = high_energy_json[i]["id"] //*IMPORTANT* NOTE: use "ID" and not "id" for reference
+    //star.id = high_energy_json[i]["id"]
+    console.log(star.position)
+    targetListAll.push(star)
+    if(high_energy_json[i]["ISRO Observed"] == "True")
+        targetListObserved.push(star)
+    console.log(star.ID)
+    let sprite = new THREE.Sprite( spriteMaterial );
+    sprite.scale.set(30, 30, 1.0);
     scene.add( star );
-})
+}
 
 /**
  * Sizes
@@ -162,7 +161,7 @@ const sizes = {
  * Camera
  */
 // camera attributes
-const viewAngle = 45, aspect = sizes.width / sizes.height, near = 0.1, far = 500000
+const viewAngle = 25, aspect = sizes.width / sizes.height, near = 0.1, far = 500000
 // set up camera
 const camera = new THREE.PerspectiveCamera( viewAngle, aspect, near, far)
 // add the camera to the scene
@@ -177,67 +176,68 @@ camera.lookAt(scene.position);
  * Controls
  */
 const controls = new OrbitControls(camera, canvas)
+controls.lookSpeed = 0.01
 controls.enableDamping = true;
 
 /**
  * Stars in background
  */
- const r = radius/4, starsGeometry = [ new THREE.BufferGeometry(), new THREE.BufferGeometry() ];
+//  const r = radius/8, starsGeometry = [ new THREE.BufferGeometry(), new THREE.BufferGeometry() ];
 
- const vertices1 = [];
- const vertices2 = [];
+//  const vertices1 = [];
+//  const vertices2 = [];
 
- const vertex = new THREE.Vector3();
+//  const vertex = new THREE.Vector3();
 
- for ( let i = 0; i < 250; i ++ ) {
+//  for ( let i = 0; i < 500; i ++ ) {
 
-     vertex.x = Math.random() * 2 - 1;
-     vertex.y = Math.random() * 2 - 1;
-     vertex.z = Math.random() * 2 - 1;
-     vertex.multiplyScalar( r );
+//      vertex.x = Math.random() * 2 - 1;
+//      vertex.y = Math.random() * 2 - 1;
+//      vertex.z = Math.random() * 2 - 1;
+//      vertex.multiplyScalar( r );
 
-     vertices1.push( vertex.x, vertex.y, vertex.z );
+//      vertices1.push( vertex.x, vertex.y, vertex.z );
 
- }
+//  }
 
- for ( let i = 0; i < 1500; i ++ ) {
+//  for ( let i = 0; i < 3000; i ++ ) {
 
-     vertex.x = Math.random() * 2 - 1;
-     vertex.y = Math.random() * 2 - 1;
-     vertex.z = Math.random() * 2 - 1;
-     vertex.multiplyScalar( r );
+//      vertex.x = Math.random() * 2 - 1;
+//      vertex.y = Math.random() * 2 - 1;
+//      vertex.z = Math.random() * 2 - 1;
+//      vertex.multiplyScalar( r );
 
-     vertices2.push( vertex.x, vertex.y, vertex.z );
+//      vertices2.push( vertex.x, vertex.y, vertex.z );
 
- }
+//  }
 
- starsGeometry[ 0 ].setAttribute( 'position', new THREE.Float32BufferAttribute( vertices1, 3 ) );
- starsGeometry[ 1 ].setAttribute( 'position', new THREE.Float32BufferAttribute( vertices2, 3 ) );
+//  starsGeometry[ 0 ].setAttribute( 'position', new THREE.Float32BufferAttribute( vertices1, 3 ) );
+//  starsGeometry[ 1 ].setAttribute( 'position', new THREE.Float32BufferAttribute( vertices2, 3 ) );
 
- const starsMaterials = [
-     new THREE.PointsMaterial( { color: 0x555555, size: 2, sizeAttenuation: false } ),
-     new THREE.PointsMaterial( { color: 0x555555, size: 1, sizeAttenuation: false } ),
-     new THREE.PointsMaterial( { color: 0x333333, size: 2, sizeAttenuation: false } ),
-     new THREE.PointsMaterial( { color: 0x3a3a3a, size: 1, sizeAttenuation: false } ),
-     new THREE.PointsMaterial( { color: 0x1a1a1a, size: 2, sizeAttenuation: false } ),
-     new THREE.PointsMaterial( { color: 0x1a1a1a, size: 1, sizeAttenuation: false } )
- ];
+//  const starsMaterials = [
+//      new THREE.PointsMaterial( { color: 0x555555, size: 2, sizeAttenuation: false } ),
+//      new THREE.PointsMaterial( { color: 0x555555, size: 1, sizeAttenuation: false } ),
+//      new THREE.PointsMaterial( { color: 0x333333, size: 2, sizeAttenuation: false } ),
+//      new THREE.PointsMaterial( { color: 0x3a3a3a, size: 1, sizeAttenuation: false } ),
+//      new THREE.PointsMaterial( { color: 0x1a1a1a, size: 2, sizeAttenuation: false } ),
+//      new THREE.PointsMaterial( { color: 0x1a1a1a, size: 1, sizeAttenuation: false } )
+//  ];
 
- for ( let i = 10; i < 30; i ++ ) {
+//  for ( let i = 10; i < 1000; i ++ ) {
 
-     const stars = new THREE.Points( starsGeometry[ i % 2 ], starsMaterials[ i % 6 ] );
+//      const stars = new THREE.Points( starsGeometry[ i % 2 ], starsMaterials[ i % 6 ] );
 
-     stars.rotation.x = Math.random() * 6;
-     stars.rotation.y = Math.random() * 6;
-     stars.rotation.z = Math.random() * 6;
-     stars.scale.setScalar( i * 10 );
+//      stars.rotation.x = Math.random() * 6;
+//      stars.rotation.y = Math.random() * 6;
+//      stars.rotation.z = Math.random() * 6;
+//      stars.scale.setScalar( i * 10 );
 
-     stars.matrixAutoUpdate = false;
-     stars.updateMatrix();
+//      stars.matrixAutoUpdate = false;
+//      stars.updateMatrix();
 
-     scene.add( stars );
+//      scene.add( stars );
 
- }
+//  }
 
 
 /**
@@ -251,7 +251,7 @@ document.addEventListener('click', (event) => {
 	mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 	// find intersections
     raycaster.setFromCamera( mouse, camera );
-    const intersects = raycaster.intersectObjects( targetList );
+    const intersects = raycaster.intersectObjects( targetListObserved );
     if(intersects.length>0){
         let intersected_object = intersects[0];
         console.log("Hit " );
@@ -319,7 +319,7 @@ const tick = () =>
 	raycaster.setFromCamera( mouse, camera );
 
 	// calculate objects intersecting the picking ray
-	const intersects = raycaster.intersectObjects( targetList );
+	const intersects = raycaster.intersectObjects( targetListAll );
 
 	for ( let i = 0; i < intersects.length; i ++ ) {
 
@@ -379,3 +379,6 @@ const tick = () =>
 }
 
 tick()
+}
+
+ request();
