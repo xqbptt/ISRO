@@ -78,7 +78,7 @@ const materialNormalMap = new THREE.MeshPhongMaterial( {
     shininess: 15,
     map: textureLoader.load( "textures/planet/earth_atmos_4096.jpg" ),
     specularMap: textureLoader.load( "textures/planet/earth_specular_2048.jpg" ),
-    lightMap: textureLoader.load( "textures/planet/earth_lights_2048.jpg" ),
+    lightMap: textureLoader.load( "textures/planet/earth_lights_2048.png" ),
     wireframe: true,
     transparent: true,
     opacity: 0.25,
@@ -122,7 +122,7 @@ scene.add(pointLight);
  const geometryObserved = new THREE.SphereGeometry( 20, 8 )
  const geometryNotObserved = new THREE.SphereGeometry( 15, 8 )
  const materialObserved = new THREE.MeshBasicMaterial( { color: 0x009900 } )
- const materialNotObserved = new THREE.MeshBasicMaterial( { color: 0x000099 } )
+ const materialNotObserved = new THREE.MeshBasicMaterial( { color: 0xffffff } )
 console.log(high_energy_json)
 for(let i = 0; i<high_energy_json.length; i = i+1)
 {
@@ -137,9 +137,10 @@ for(let i = 0; i<high_energy_json.length; i = i+1)
     console.log(high_energy_json[i]["x"])
     star.position.set( radius*parseFloat(high_energy_json[i]["x"]),radius*parseFloat(high_energy_json[i]["y"]),radius*parseFloat(high_energy_json[i]["z"]))
     star.name = high_energy_json[i]["Name"]
-    star.ID = high_energy_json[i]["id"] //*IMPORTANT* NOTE: use "ID" and not "id" for reference
+    //star.ID = high_energy_json[i]["id"] //*IMPORTANT* NOTE: use "ID" and not "id" for reference
     //star.id = high_energy_json[i]["id"]
     console.log(star.position)
+    star.info = high_energy_json[i]
     targetListAll.push(star)
     if(high_energy_json[i]["ISRO Observed"] == "True")
         targetListObserved.push(star)
@@ -255,13 +256,46 @@ document.addEventListener('click', (event) => {
         console.log("Hit " );
         if ( intersected_object.object.name )
         {
+            let info = intersected_object.object.info;
             let modal = document.getElementById("myModal");
+            console.log(modal)
             let span = document.getElementsByClassName("close")[0];
-            let displayText = document.getElementById("text");
-            displayText.innerHTML = "Publications related to " + intersected_object.object.name;
+            document.getElementById("name").innerHTML = info["Name"]
+            document.getElementById("obs_name").innerHTML = info["Observation Name"]
+            document.getElementById("rt_asc_hr").innerHTML = info["RA (h)"];
+            document.getElementById("rt_asc_mn").innerHTML = info["RA (min)"];
+            document.getElementById("rt_asc_sc").innerHTML = info["RA (sec)"];
+            document.getElementById("dec_deg").innerHTML = info["DE (deg)"];
+            document.getElementById("dec_acmn").innerHTML = info["DE (arcmin)"];
+            document.getElementById("dec_acsc").innerHTML = info["DE (arcsec)"];
+            document.getElementById("gal_long").innerHTML = info["Galactic Longitude (deg)"];
+            document.getElementById("gal_lat").innerHTML = info["Galactic Lattitude (deg)"];
+            document.getElementById("pos_acc").innerHTML = info["Position Accuracy (arcsec)"];
+            document.getElementById("avg_flux").innerHTML = info["Average Flux (mag)"];
+            document.getElementById("orb_per").innerHTML = info["Orbital Period (d)"];
+            document.getElementById("range").innerHTML = info["Range"];
+            document.getElementById("pls_per").innerHTML = info["Pulse Period (s)"];
+            document.getElementById("sp_typ").innerHTML = info["Spectral Type"];
+            // displayText.innerHTML = "Publications related to " + intersected_object.object.name;
+            let url1 = document.getElementById("pub1")
+            let url2 = document.getElementById("pub2")
+            if(info["URL 1"] == "nan")
+                url1.style.display = "none"
+            else{
+                url1.style.display = "block"
+                url1.href = info["URL 1"]
+                pub1.innerHTML = info["Title 1"]
+            }
+            if(info["URL 2"] == "nan")
+                url2.style.display = "none"
+            else{
+                url2.style.display = "block"
+                url2.href = info["URL 2"]
+                pub2.innerHTML = info["Title 2"]
+            }
             modal.style.display = "block";
             span.onclick = function() {
-            modal.style.display = "none";
+                modal.style.display = "none";
             }
             window.onclick = function(event) {
                 if (event.target == modal) {

@@ -75,7 +75,7 @@ body{
   
   /* Modal Content/Box */
   .modal-content {
-    background-image: url("https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2014/12/08/300210-stars-4.jpg");
+    /*background-image: url("https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2014/12/08/300210-stars-4.jpg");*/
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
   
