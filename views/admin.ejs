@@ -100,7 +100,18 @@
       <form action="/admin" method="POST" enctype="multipart/form-data">
         <header>
           <h1>Hello <%= name %></h1>
+          <%if (success) { %>
+          <h2 style="color: #39ace7; text-align: center">
+            Files are successfully uploaded
+          </h2>
+          <% } %>
         </header>
+        <input
+          style="display: none; opacity: 0"
+          type="text"
+          name="name"
+          value="<%= name %>"
+        />
         <div class="formDiv">
           <h1>Upload both csv files</h1>
           <div>

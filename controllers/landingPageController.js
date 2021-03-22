@@ -11,7 +11,7 @@ exports.adminLogin = (req, res) => {
 exports.adminLoginTask = (req, res) => {
   const { userName, password } = req.body;
   let isValid = false;
-  console.log(userName, password);
+
   loginData.every(({ dbUserName, dbPassword }) => {
     if (dbUserName === userName && dbPassword === password) {
       isValid = true;
@@ -21,7 +21,7 @@ exports.adminLoginTask = (req, res) => {
     }
   });
   if (isValid) {
-    return res.render("admin", { name: userName });
+    return res.render("admin", { name: userName, success: false });
   }
   res.render("unAuthorized");
 };
