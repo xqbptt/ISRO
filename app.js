@@ -16,8 +16,9 @@ app.set("view engine", "ejs");
 /**
  * Routes
  */
-const landingPageRoutes = require("./routes/landingPageRoutes.js");
+const landingPageRoutes = require("./routes/landingPageRoutes");
 const toolRoutes = require("./routes/toolRoutes");
+const adminRoutes = require("./routes/adminRoutes");
 
 /**
  * middlewares
@@ -25,6 +26,7 @@ const toolRoutes = require("./routes/toolRoutes");
 app.use(express.static("static"));
 app.use("/", landingPageRoutes);
 app.use("/visualization", toolRoutes);
+app.use("/admin", adminRoutes);
 
 app.listen(PORT, () => {
   console.log(`App is listening on port ${PORT}`);

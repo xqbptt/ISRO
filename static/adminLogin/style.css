@@ -1,4 +1,3 @@
-<style>
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
 /* BASIC */
@@ -166,53 +165,53 @@ input[type="password"]::placeholder {
 
 @-webkit-keyframes fadeInDown {
   0% {
-	opacity: 0;
-	-webkit-transform: translate3d(0, -100%, 0);
-	transform: translate3d(0, -100%, 0);
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
   }
   100% {
-	opacity: 1;
-	-webkit-transform: none;
-	transform: none;
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
 }
 
 @keyframes fadeInDown {
   0% {
-	opacity: 0;
-	-webkit-transform: translate3d(0, -100%, 0);
-	transform: translate3d(0, -100%, 0);
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
   }
   100% {
-	opacity: 1;
-	-webkit-transform: none;
-	transform: none;
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
 }
 
 /* Simple CSS3 Fade-in Animation */
 @-webkit-keyframes fadeIn {
   from {
-	opacity: 0;
+    opacity: 0;
   }
   to {
-	opacity: 1;
+    opacity: 1;
   }
 }
 @-moz-keyframes fadeIn {
   from {
-	opacity: 0;
+    opacity: 0;
   }
   to {
-	opacity: 1;
+    opacity: 1;
   }
 }
 @keyframes fadeIn {
   from {
-	opacity: 0;
+    opacity: 0;
   }
   to {
-	opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -289,4 +288,3 @@ input[type="password"]::placeholder {
 * {
   box-sizing: border-box;
 }
-</style>
