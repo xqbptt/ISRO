@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 /**
  * Parser
  */
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 /**
  * Render Engine
