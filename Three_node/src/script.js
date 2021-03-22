@@ -48,16 +48,16 @@ const canvas = document.querySelector('canvas.webgl')
 
 // Scene
 const scene = new THREE.Scene()
-// scene.background = new THREE.CubeTextureLoader()
-// 	.setPath( 'textures/cubeMaps/' )
-// 	.load( [
-// 		'px.png',
-// 		'nx.png',
-// 		'py.png',
-// 		'ny.png',
-// 		'pz.png',
-// 		'nz.png'
-// 	] );
+scene.background = new THREE.CubeTextureLoader()
+	.setPath( 'textures/cubeMaps/' )
+	.load( [
+		'px.png',
+		'nx.png',
+		'py.png',
+		'ny.png',
+		'pz.png',
+		'nz.png'
+	] );
 // scene.add(axesHelper);
 
 /**
@@ -144,8 +144,6 @@ for(let i = 0; i<high_energy_json.length; i = i+1)
     if(high_energy_json[i]["ISRO Observed"] == "True")
         targetListObserved.push(star)
     console.log(star.ID)
-    let sprite = new THREE.Sprite( spriteMaterial );
-    sprite.scale.set(30, 30, 1.0);
     scene.add( star );
 }
 
