@@ -1,3 +1,4 @@
+
 body{
     margin: 0;
 }
@@ -34,6 +35,7 @@ body{
        0    1px 0 #000,
       -1px  1px 0 #000,
       -1px  0   0 #000;
+      color: white;
   }
   /* #labels>div:hover {
     color: red;
@@ -46,8 +48,9 @@ body{
   }
   /* MODAL STYLING IS HERE */
   .modal {
+    background-image: url("");
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    position: absolute; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
@@ -56,15 +59,28 @@ body{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    transition: opacity .5s;
   }
+  .modal-header {
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #b0e0e6;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+ }
   
   /* Modal Content/Box */
   .modal-content {
-    background-color: #fefefe;
+    background-image: url("https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2014/12/08/300210-stars-4.jpg");
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+  
+    width: 40%; /* Could be more or less, depending on screen size */
+    border-radius: 8px !important;
   }
   
   /* The Close Button */
@@ -81,3 +97,82 @@ body{
     text-decoration: none;
     cursor: pointer;
   }
+  .fade-scale {
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear;
+  }
+  
+  .fade-scale.in {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .card {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #d2d2dc;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgb(249, 249, 250);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1);
+    box-shadow: 0px 0px 5px 0px rgb(161, 163, 164)
+}
+
+.card .card-body {
+    padding: 1rem 1rem
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 17px;
+    color: #544a26
+  
+}
+
+.description {
+    font-size: 14px;
+    color: #867f64
+}
+
+.mt-30 {
+    margin-top: 30px
+}
+.btn-center {
+  margin-top: 200px
+}
+
+.btn:focus {
+  outline: none
+}
+
+.btn {
+  border-radius: 2px;
+  text-transform: capitalize;
+  font-size: 15px;
+  padding: 10px 19px;
+  cursor: pointer;
+  color: #fff;
+  width: 100%
+}
+.button {
+    background-color: #00bfff;
+    color: #FFFFFF;
+    padding: 8px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
+}
