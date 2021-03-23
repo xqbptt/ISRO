@@ -49,7 +49,7 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene()
 scene.background = new THREE.CubeTextureLoader()
-	.setPath( 'textures/cubeMaps/' )
+	.setPath( 'textures/cubeMaps/nb_' )
 	.load( [
 		'px.png',
 		'nx.png',
@@ -119,32 +119,93 @@ scene.add(pointLight);
  * Stars
  */
 
- const geometryObserved = new THREE.SphereGeometry( 20, 8 )
- const geometryNotObserved = new THREE.SphereGeometry( 15, 8 )
- const materialObserved = new THREE.MeshBasicMaterial( { color: 0x009900 } )
- const materialNotObserved = new THREE.MeshBasicMaterial( { color: 0xffffff } )
+const glowHE = new THREE.SpriteMaterial( { 
+    map: textureLoader.load('textures/stars/flare-red1.png'), 
+    color: 0xffffff, 
+    transparent: true,
+    opacity: 0.8,
+    depthTest: false 
+} );
+const glowLE = new THREE.SpriteMaterial( { 
+    map: textureLoader.load('textures/stars/flare-green1.png'), 
+    color: 0xffffff, 
+    transparent: true,
+    opacity: 0.8,
+    depthTest: false 
+} );
+const glowHEUnObs = new THREE.SpriteMaterial( { 
+    map: textureLoader.load('textures/stars/flare-blue-spikey1.png'), 
+    color: 0xffffff,
+    transparent: true,
+    opacity: 0.5, 
+    depthTest: false 
+} );
+const glowLEUnObs = new THREE.SpriteMaterial( { 
+    map: textureLoader.load('textures/stars/flare-blue-purple3.png'), 
+    color: 0xffffff, 
+    transparent: true,
+    opacity: 0.5,
+    depthTest: false 
+} );
+
+ const geometryStar = new THREE.SphereGeometry( 20, 8 )
+ const materialStar = new THREE.MeshBasicMaterial( { color: 0xffffff, transparent: true , opacity:0.5} )
 console.log(high_energy_json)
 for(let i = 0; i<high_energy_json.length; i = i+1)
 {
     // console.log({x, y, z});
     // console.log(i);
     console.log(high_energy_json[i])
-    let star;
-    if(high_energy_json[i]["ISRO Observed"] == "True")
-        star = new THREE.Mesh( geometryObserved , materialObserved )
-    else
-        star = new THREE.Mesh( geometryNotObserved , materialNotObserved )
+    let star = new THREE.Mesh( geometryStar , materialStar )
     console.log(high_energy_json[i]["x"])
     star.position.set( radius*parseFloat(high_energy_json[i]["x"]),radius*parseFloat(high_energy_json[i]["y"]),radius*parseFloat(high_energy_json[i]["z"]))
     star.name = high_energy_json[i]["Name"]
-    //star.ID = high_energy_json[i]["id"] //*IMPORTANT* NOTE: use "ID" and not "id" for reference
-    //star.id = high_energy_json[i]["id"]
     console.log(star.position)
     star.info = high_energy_json[i]
     targetListAll.push(star)
-    if(high_energy_json[i]["ISRO Observed"] == "True")
+    let sprite
+    
+    if(high_energy_json[i]["ISRO Observed"] == "True"){
         targetListObserved.push(star)
+        sprite = new THREE.Sprite(glowHE)
+    }
+    else {
+        sprite = new THREE.Sprite(glowHEUnObs)
+    }
     console.log(star.ID)
+    
+    
+    sprite.scale.set(400, 400, 1)   
+    star.add(sprite)
+    scene.add( star );
+}
+
+for(let i = 0; i<low_energy_json.length; i = i+1)
+{
+    // console.log({x, y, z});
+    // console.log(i);
+    console.log(low_energy_json[i])
+    let star = new THREE.Mesh( geometryStar , materialStar )
+    console.log(low_energy_json[i]["x"])
+    star.position.set( radius*parseFloat(low_energy_json[i]["x"]),radius*parseFloat(low_energy_json[i]["y"]),radius*parseFloat(low_energy_json[i]["z"]))
+    star.name = low_energy_json[i]["Name"]
+    console.log(star.position)
+    star.info = low_energy_json[i]
+    targetListAll.push(star)
+    let sprite
+    
+    if(low_energy_json[i]["ISRO Observed"] == "True"){
+        targetListObserved.push(star)
+        sprite = new THREE.Sprite(glowLE)
+    }
+    else {
+        sprite = new THREE.Sprite(glowLEUnObs)
+    }
+    console.log(star.ID)
+    
+    
+    sprite.scale.set(400, 400, 1)   
+    star.add(sprite)
     scene.add( star );
 }
 
@@ -404,7 +465,22 @@ const tick = () =>
 
     // Render
     renderer.render(scene, camera)
+    /**
+     * handle window resize
+     */
+    window.addEventListener( 'resize', onWindowResize );
 
+    function onWindowResize() {
+
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize( width, height );
+
+    }
 
     // Call tick again on the next frame
     window.requestAnimationFrame(tick)
