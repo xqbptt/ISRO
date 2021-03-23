@@ -1,53 +1,90 @@
 .container {
-    position: absolute;
-    background-image: url("/assets/images/isro_back.gif");
-    background-size: 100% 100%;
-    height: 100%;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-  }
-  .container .content {
-    margin: auto;
-    margin-top: 50px;
-    width: 75%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  .container .content .logo {
-    width: auto;
-    height: auto;
-    padding: 10px;
-  }
-  .container .content .logo .isro-logo {
-    height: 100px;
-    width: 100px;
-  }
-  .container .content .heading {
-    width: 100%;
-    margin-top: 20px;
-    padding: 10px;
-    font-family: brandon-grotesque;
-    font-size: 20px;
-    color: white;
-  }
-  .container .content .hr {
-    margin: 10px;
-    height: 2px;
-    padding: 10px;
-    width: 100%;
-    border-top: 1px solid;
-    color: white;
-  }
-  .container .content .explore-click {
-    margin-top: 10px;
-    padding: 10px;
-    font-family: brandon-grotesque;
-    font-weight: 10px;
-    color: white;
-  }
-  
-  /*# sourceMappingURL=landingPage.css.map */
-  
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  background-color: #000;
+  position: absolute;
+}
+.container .logo {
+  margin-top: 41px;
+  margin-left: 122px;
+  height: 64px;
+  width: 66px;
+}
+.container .content {
+  margin-top: 108px;
+  margin-left: 122px;
+  display: flex;
+  flex-direction: column;
+}
+.container .content .welcome {
+  width: auto;
+  height: 29px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+.container .content .caption {
+  margin-top: 17px;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 88px;
+  position: relative;
+}
+.container .content .caption .normal-text {
+  color: white;
+}
+.container .content .caption .colored-text {
+  color: #42D7F8;
+}
+.container .content .explore-button {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  width: 240.57px;
+  height: 68px;
+  border: 3px solid #42D7F8;
+  box-sizing: border-box;
+  box-shadow: 12px 4px 41px rgba(66, 215, 248, 0.06);
+  border-radius: 5px;
+  justify-content: space-around;
+  padding: 20px;
+  cursor: pointer;
+}
+.container .content .explore-button .explore-text {
+  width: auto;
+  height: 29px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #42D7F8;
+  margin-top: -4px;
+}
+.container .content .admin-link {
+  margin-top: 23px;
+  width: auto;
+  height: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=landingPage.css.map */

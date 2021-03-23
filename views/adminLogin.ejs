@@ -5,8 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Login</title>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/adminLogin.css" />
   </head>
   <body>
-    <h1>Login page for the admin</h1>
+    <div class='container'>
+      <img class="logo" src='assets/vectors/isro_logo.svg'/>
+      <div class="content">
+        <div class="back-button">
+          <img class="left-arrow" src="assets/vectors/left_arrow.svg"/>
+          <span class="back-text">Back</span>
+        </div>
+        <div class="input-container">
+          <span class="normal-text">Sign in</span>
+          <input type="text" id="username" name="username" placeholder="USERNAME" class="input-box"/>
+          <input type="password" id="password" name="password" placeholder="PASSWORD" class="input-box"/>
+        </div>
+        <div class="signin-button" id="signin-btn">
+          <span class="signin-text">Sign in</span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

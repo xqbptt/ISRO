@@ -1,0 +1,106 @@
+.container {
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    background-color: #000;
+    position: absolute;
+  }
+  .container .logo {
+    margin-top: 41px;
+    margin-left: 122px;
+    height: 64px;
+    width: 66px;
+  }
+  .container .content {
+    margin-top: 100px;
+    margin-left: 122px;
+    display: flex;
+    flex-direction: column;
+  }
+  .container .back-button {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+  }
+  .container .back-button .left-arrow {
+    height: 14px;
+    width: 7px;
+    padding: 8px 5px;
+  }
+  .container .back-button .back-text {
+    padding-left: 7px;
+    width: auto;
+    height: 29px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+  }
+  .container .input-container {
+    margin-top: 41px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .container .input-container .normal-text {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 88px;
+    position: relative;
+    color: white;
+  }
+  .container .input-container .input-box {
+    margin-top: 39px;
+    width: 385.84px;
+    height: 63.48px;
+    background: #242424;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 21px 38px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+  }
+  .container .signin-button {
+    margin-top: 47px;
+    width: 162.96px;
+    height: 66.94px;
+    background: #242424;
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 12px 4px 41px rgba(66, 215, 248, 0.06);
+    border-radius: 5px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+  }
+  .container .signin-button .signin-text {
+    padding: 15px;
+    width: auto;
+    height: 29px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+  }
+  
+  /*# sourceMappingURL=adminLogin.css.map */
+  
