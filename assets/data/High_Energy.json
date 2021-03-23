@@ -31,7 +31,10 @@
     "URL 2": "",
     "id": 0,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.3701110683187567,
+    "y": 0.02098220725599614,
+    "z": 0.9287505284448645
   },
   {
     "Observation Name": "",
@@ -65,7 +68,10 @@
     "URL 2": "",
     "id": 1,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.8226954511278717,
+    "y": 0.5351349014323065,
+    "z": -0.19184064210313553
   },
   {
     "Observation Name": "",
@@ -99,7 +105,10 @@
     "URL 2": "",
     "id": 2,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.4410376983419199,
+    "y": -0.8454362935260814,
+    "z": -0.30120295853484447
   },
   {
     "Observation Name": "",
@@ -133,7 +142,10 @@
     "URL 2": "",
     "id": 3,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.6914235624670712,
+    "y": -0.5706154100181914,
+    "z": 0.44309311788281647
   },
   {
     "Observation Name": "",
@@ -167,7 +179,10 @@
     "URL 2": "",
     "id": 4,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.8821361088773234,
+    "y": 0.45555848039479946,
+    "z": 0.11959245944103813
   },
   {
     "Observation Name": "",
@@ -201,7 +216,10 @@
     "URL 2": "",
     "id": 5,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.8778156747706152,
+    "y": -0.44954825877912613,
+    "z": 0.16536627272713497
   },
   {
     "Observation Name": "",
@@ -235,7 +253,10 @@
     "URL 2": "",
     "id": 6,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.6578713000192575,
+    "y": -0.6421397945384549,
+    "z": 0.39352488724486395
   },
   {
     "Observation Name": "",
@@ -269,7 +290,10 @@
     "URL 2": "",
     "id": 7,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.7728110575839443,
+    "y": 0.5026868309032393,
+    "z": 0.3873874279225433
   },
   {
     "Observation Name": "",
@@ -303,7 +327,10 @@
     "URL 2": "",
     "id": 8,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.8025556100714626,
+    "y": 0.3648704487327615,
+    "z": 0.4719894579165681
   },
   {
     "Observation Name": "",
@@ -337,7 +364,10 @@
     "URL 2": "",
     "id": 9,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.4801739625094855,
+    "y": -0.6283692851336578,
+    "z": 0.6120335017207433
   },
   {
     "Observation Name": "SMC X-2",
@@ -394,7 +424,10 @@
         "Prime_Instrument": "sxt"
       }
     ],
-    "ISRO details count": 2
+    "ISRO details count": 2,
+    "x": -0.476809088506177,
+    "y": 0.02865997708586301,
+    "z": 0.8785395260495378
   },
   {
     "Observation Name": "",
@@ -428,7 +461,10 @@
     "URL 2": "",
     "id": 11,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.0202358242117133,
+    "y": 0.033424831013803585,
+    "z": 0.9992363544678362
   },
   {
     "Observation Name": "",
@@ -462,7 +498,10 @@
     "URL 2": "",
     "id": 12,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.4716584654947303,
+    "y": -0.38924850596141497,
+    "z": 0.7912167165410262
   },
   {
     "Observation Name": "",
@@ -496,7 +535,10 @@
     "URL 2": "",
     "id": 13,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.44387214534515246,
+    "y": -0.1487208144346881,
+    "z": 0.8836626267646351
   },
   {
     "Observation Name": "",
@@ -530,7 +572,10 @@
     "URL 2": "",
     "id": 14,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.3025648567503458,
+    "y": -0.24969957514272048,
+    "z": 0.9198394586193764
   },
   {
     "Observation Name": "",
@@ -564,7 +609,10 @@
     "URL 2": "",
     "id": 15,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.29642705335376673,
+    "y": 0.08844611958719281,
+    "z": 0.9509512532038491
   },
   {
     "Observation Name": "",
@@ -598,7 +646,10 @@
     "URL 2": "",
     "id": 16,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.2936795126818547,
+    "y": 0.2772509493278492,
+    "z": 0.9148137815576209
   },
   {
     "Observation Name": "",
@@ -632,7 +683,10 @@
     "URL 2": "",
     "id": 17,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.19236107243428924,
+    "y": 0.5820897710512517,
+    "z": 0.7900434901000271
   },
   {
     "Observation Name": "",
@@ -666,7 +720,10 @@
     "URL 2": "",
     "id": 18,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.8424069820160192,
+    "y": 0.313848348718946,
+    "z": 0.43800649613567766
   },
   {
     "Observation Name": "",
@@ -700,7 +757,10 @@
     "URL 2": "",
     "id": 19,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.9138743225522817,
+    "y": 0.39354322204478825,
+    "z": -0.09978704806844713
   },
   {
     "Observation Name": "",
@@ -734,7 +794,10 @@
     "URL 2": "",
     "id": 20,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.001777867949672536,
+    "y": -0.0028309560319362474,
+    "z": -0.9999944124211388
   },
   {
     "Observation Name": "",
@@ -768,7 +831,10 @@
     "URL 2": "",
     "id": 21,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.7572396774094076,
+    "y": 0.3564607311222927,
+    "z": -0.5472876922831874
   },
   {
     "Observation Name": "",
@@ -802,7 +868,10 @@
     "URL 2": "",
     "id": 22,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.6186940101956299,
+    "y": 0.2188300826488315,
+    "z": -0.7545403346912315
   },
   {
     "Observation Name": "",
@@ -836,7 +905,10 @@
     "URL 2": "",
     "id": 23,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.4308333676118491,
+    "y": 0.2224937765016972,
+    "z": -0.8745736840142436
   },
   {
     "Observation Name": "",
@@ -870,7 +942,10 @@
     "URL 2": "",
     "id": 24,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.6082224801518982,
+    "y": 0.502102907956604,
+    "z": 0.6147829571965995
   },
   {
     "Observation Name": "",
@@ -904,7 +979,10 @@
     "URL 2": "",
     "id": 25,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.4396171855129737,
+    "y": 0.5556744935957404,
+    "z": 0.7056646422832655
   },
   {
     "Observation Name": "",
@@ -938,7 +1016,10 @@
     "URL 2": "",
     "id": 26,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.8687337438756667,
+    "y": 0.27831344613092207,
+    "z": 0.40968684132456307
   },
   {
     "Observation Name": "",
@@ -972,7 +1053,10 @@
     "URL 2": "",
     "id": 27,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.815546102905313,
+    "y": 0.20249225574558527,
+    "z": 0.5421083290256855
   },
   {
     "Observation Name": "",
@@ -1006,7 +1090,10 @@
     "URL 2": "",
     "id": 28,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.11699607196813169,
+    "y": -0.7201357541895759,
+    "z": 0.6838979563369367
   },
   {
     "Observation Name": "",
@@ -1040,7 +1127,10 @@
     "URL 2": "",
     "id": 29,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.03368050417241082,
+    "y": 0.7582410368735727,
+    "z": 0.6511037963639758
   },
   {
     "Observation Name": "",
@@ -1074,7 +1164,10 @@
     "URL 2": "",
     "id": 30,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.9148265175351677,
+    "y": -0.2242694011149447,
+    "z": -0.33585067893041626
   },
   {
     "Observation Name": "",
@@ -1108,7 +1201,10 @@
     "URL 2": "",
     "id": 31,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.6161407137661499,
+    "y": 0.24794903634095883,
+    "z": 0.7475907277497021
   },
   {
     "Observation Name": "",
@@ -1142,7 +1238,10 @@
     "URL 2": "",
     "id": 32,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.4334293519029032,
+    "y": 0.2749700756056088,
+    "z": 0.8582135249636159
   },
   {
     "Observation Name": "",
@@ -1176,7 +1275,10 @@
     "URL 2": "",
     "id": 33,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.3636378780498407,
+    "y": 0.21520150777385458,
+    "z": 0.9063419910272661
   },
   {
     "Observation Name": "",
@@ -1210,7 +1312,10 @@
     "URL 2": "",
     "id": 34,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.9433059494976495,
+    "y": -0.3283441288244586,
+    "z": -0.048621175518958636
   },
   {
     "Observation Name": "",
@@ -1244,7 +1349,10 @@
     "URL 2": "",
     "id": 35,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.8727045552752362,
+    "y": -0.37596736561823535,
+    "z": 0.31150489433062883
   },
   {
     "Observation Name": "",
@@ -1278,7 +1386,10 @@
     "URL 2": "",
     "id": 36,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.6876177921154928,
+    "y": -0.6319299102689536,
+    "z": 0.357556094163821
   },
   {
     "Observation Name": "",
@@ -1312,7 +1423,10 @@
     "URL 2": "",
     "id": 37,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.8313168775702374,
+    "y": -0.3336832151889433,
+    "z": -0.4444859513730891
   },
   {
     "Observation Name": "",
@@ -1346,7 +1460,10 @@
     "URL 2": "",
     "id": 38,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.012463512656944831,
+    "y": 0.009442834300528826,
+    "z": -0.9998777393924834
   },
   {
     "Observation Name": "",
@@ -1380,7 +1497,10 @@
     "URL 2": "",
     "id": 39,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.5104786736446777,
+    "y": -0.01656838481651906,
+    "z": -0.8597307790108147
   },
   {
     "Observation Name": "",
@@ -1414,7 +1534,10 @@
     "URL 2": "",
     "id": 40,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.236633927818045,
+    "y": -0.6776005907334983,
+    "z": 0.6963202019495186
   },
   {
     "Observation Name": "",
@@ -1448,7 +1571,10 @@
     "URL 2": "",
     "id": 41,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.4314409606357998,
+    "y": -0.038983753345239715,
+    "z": 0.9012984879942803
   },
   {
     "Observation Name": "",
@@ -1482,7 +1608,10 @@
     "URL 2": "",
     "id": 42,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.10095710015311199,
+    "y": -0.32945606227313107,
+    "z": 0.9387578851653696
   },
   {
     "Observation Name": "",
@@ -1516,7 +1645,10 @@
     "URL 2": "",
     "id": 43,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.044484740691488174,
+    "y": -0.01574151886284323,
+    "z": 0.9988860357565831
   },
   {
     "Observation Name": "",
@@ -1550,7 +1682,10 @@
     "URL 2": "",
     "id": 44,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.0020501276581713704,
+    "y": -0.14624771196619638,
+    "z": 0.9892458762720407
   },
   {
     "Observation Name": "",
@@ -1584,7 +1719,10 @@
     "URL 2": "",
     "id": 45,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.02902390713842013,
+    "y": -0.11242343994450783,
+    "z": 0.9932364184651427
   },
   {
     "Observation Name": "",
@@ -1618,7 +1756,10 @@
     "URL 2": "",
     "id": 46,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.258337315072752,
+    "y": -0.4268552056327596,
+    "z": 0.8666351395282886
   },
   {
     "Observation Name": "",
@@ -1652,7 +1793,10 @@
     "URL 2": "",
     "id": 47,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.4202394517668973,
+    "y": 0.45349912506881385,
+    "z": 0.7859626878805877
   },
   {
     "Observation Name": "",
@@ -1686,7 +1830,10 @@
     "URL 2": "",
     "id": 48,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.390884858658383,
+    "y": -0.9154868416538516,
+    "z": 0.09535654162285653
   },
   {
     "Observation Name": "",
@@ -1720,7 +1867,10 @@
     "URL 2": "",
     "id": 49,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.06423334893741514,
+    "y": 0.6577289051348028,
+    "z": 0.7505110020742254
   },
   {
     "Observation Name": "LMC X-3",
@@ -1766,7 +1916,10 @@
         "Prime_Instrument": "sxt"
       }
     ],
-    "ISRO details count": 1
+    "ISRO details count": 1,
+    "x": -0.46527010748787134,
+    "y": 0.8807947592529993,
+    "z": 0.08788810585440693
   },
   {
     "Observation Name": "LMC X-1",
@@ -1823,7 +1976,10 @@
         "Prime_Instrument": "sxt"
       }
     ],
-    "ISRO details count": 2
+    "ISRO details count": 2,
+    "x": -0.6586325824815344,
+    "y": -0.7472854507856923,
+    "z": -0.08813385466283316
   },
   {
     "Observation Name": "",
@@ -1857,7 +2013,10 @@
     "URL 2": "",
     "id": 52,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.6554506852845591,
+    "y": -0.5691458712332707,
+    "z": -0.49644473651970894
   },
   {
     "Observation Name": "",
@@ -1891,7 +2050,10 @@
     "URL 2": "",
     "id": 53,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.06475659304553592,
+    "y": -0.8330817827334642,
+    "z": -0.5493462723408322
   },
   {
     "Observation Name": "",
@@ -1925,7 +2087,10 @@
     "URL 2": "",
     "id": 54,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.28001070277189993,
+    "y": 0.16160711873948205,
+    "z": -0.9462965420553484
   },
   {
     "Observation Name": "",
@@ -1959,7 +2124,10 @@
     "URL 2": "",
     "id": 55,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.11104059797888598,
+    "y": 0.3417408099226109,
+    "z": -0.933211232483798
   },
   {
     "Observation Name": "",
@@ -1993,7 +2161,10 @@
     "URL 2": "",
     "id": 56,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.4619786901409739,
+    "y": -0.25780528946453096,
+    "z": 0.8485942037156154
   },
   {
     "Observation Name": "",
@@ -2027,7 +2198,10 @@
     "URL 2": "",
     "id": 57,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.1019713364196037,
+    "y": 0.09184255366726166,
+    "z": -0.9905386372497926
   },
   {
     "Observation Name": "",
@@ -2061,7 +2235,10 @@
     "URL 2": "",
     "id": 58,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.07923516220783272,
+    "y": 0.022981609692355503,
+    "z": 0.9965910067253501
   },
   {
     "Observation Name": "",
@@ -2095,7 +2272,10 @@
     "URL 2": "",
     "id": 59,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.4614908078741295,
+    "y": -0.4450449956639439,
+    "z": -0.7674380666100447
   },
   {
     "Observation Name": "",
@@ -2129,7 +2309,10 @@
     "URL 2": "",
     "id": 60,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.6146233708112494,
+    "y": 0.5431487338908652,
+    "z": -0.5720380799609126
   },
   {
     "Observation Name": "",
@@ -2163,7 +2346,10 @@
     "URL 2": "",
     "id": 61,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.3210430478443077,
+    "y": 0.8950581783272745,
+    "z": -0.3095193351638929
   },
   {
     "Observation Name": "",
@@ -2197,7 +2383,10 @@
     "URL 2": "",
     "id": 62,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.6591012585571686,
+    "y": -0.5002823707588013,
+    "z": -0.5615185486484927
   },
   {
     "Observation Name": "",
@@ -2231,7 +2420,10 @@
     "URL 2": "",
     "id": 63,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.3882282711784594,
+    "y": -0.9051807369852994,
+    "z": -0.17299318728936966
   },
   {
     "Observation Name": "Vela X-1",
@@ -2299,7 +2491,10 @@
         "Prime_Instrument": "laxpc1"
       }
     ],
-    "ISRO details count": 3
+    "ISRO details count": 3,
+    "x": 0.16203875274329999,
+    "y": 0.8900078839902617,
+    "z": -0.42618001952763174
   },
   {
     "Observation Name": "",
@@ -2333,7 +2528,10 @@
     "URL 2": "",
     "id": 65,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.029146389844232477,
+    "y": 0.06840356414511391,
+    "z": 0.9972318889662992
   },
   {
     "Observation Name": "",
@@ -2367,7 +2565,10 @@
     "URL 2": "",
     "id": 66,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.7789496487456777,
+    "y": 0.2831633694063755,
+    "z": -0.5595140310532113
   },
   {
     "Observation Name": "",
@@ -2401,7 +2602,10 @@
     "URL 2": "",
     "id": 67,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.8070978598097106,
+    "y": -0.32673963014858537,
+    "z": 0.4917664677272643
   },
   {
     "Observation Name": "",
@@ -2435,7 +2639,10 @@
     "URL 2": "",
     "id": 68,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.1605772450819415,
+    "y": -0.65961691104093,
+    "z": 0.734248240740634
   },
   {
     "Observation Name": "",
@@ -2469,7 +2676,10 @@
     "URL 2": "",
     "id": 69,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.0018881153847524874,
+    "y": -0.6749459349189897,
+    "z": -0.7378647707789178
   },
   {
     "Observation Name": "",
@@ -2503,7 +2713,10 @@
     "URL 2": "",
     "id": 70,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.7609681237276705,
+    "y": 0.33050491382983727,
+    "z": 0.5582956354877948
   },
   {
     "Observation Name": "",
@@ -2537,7 +2750,10 @@
     "URL 2": "",
     "id": 71,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.7487687876968284,
+    "y": -0.23731672656564867,
+    "z": 0.6188910032171958
   },
   {
     "Observation Name": "",
@@ -2571,7 +2787,10 @@
     "URL 2": "",
     "id": 72,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.24586076717387279,
+    "y": 0.4111424756426324,
+    "z": 0.8777894667214469
   },
   {
     "Observation Name": "",
@@ -2605,7 +2824,10 @@
     "URL 2": "",
     "id": 73,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.5520514061802267,
+    "y": 0.20762960699706018,
+    "z": 0.8075451635869542
   },
   {
     "Observation Name": "GX 301-2",
@@ -2651,7 +2873,10 @@
         "Prime_Instrument": "laxpc2"
       }
     ],
-    "ISRO details count": 1
+    "ISRO details count": 1,
+    "x": 0.007342884282262699,
+    "y": -0.2647943571080357,
+    "z": -0.9642769469888613
   },
   {
     "Observation Name": "",
@@ -2685,7 +2910,10 @@
     "URL 2": "",
     "id": 75,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.42403168832026883,
+    "y": -0.04672076010399119,
+    "z": 0.9044414286594614
   },
   {
     "Observation Name": "",
@@ -2719,7 +2947,10 @@
     "URL 2": "",
     "id": 76,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.9165537751761899,
+    "y": 0.3073961804058428,
+    "z": -0.25580610915725366
   },
   {
     "Observation Name": "",
@@ -2753,7 +2984,10 @@
     "URL 2": "",
     "id": 77,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.5000248954601337,
+    "y": 0.5220320800025798,
+    "z": -0.690983076036065
   },
   {
     "Observation Name": "",
@@ -2787,7 +3021,10 @@
     "URL 2": "",
     "id": 78,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.5959311335128223,
+    "y": 0.0707368710447721,
+    "z": 0.799913982366178
   },
   {
     "Observation Name": "",
@@ -2821,7 +3058,10 @@
     "URL 2": "",
     "id": 79,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.18118544276652532,
+    "y": 0.17390234855796033,
+    "z": 0.9679513461406641
   },
   {
     "Observation Name": "",
@@ -2855,7 +3095,10 @@
     "URL 2": "",
     "id": 80,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.4141896096583358,
+    "y": -0.12119705773572156,
+    "z": -0.9020854950875109
   },
   {
     "Observation Name": "",
@@ -2889,7 +3132,10 @@
     "URL 2": "",
     "id": 81,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.6494567597366843,
+    "y": 0.5579326855116301,
+    "z": 0.5166401413654451
   },
   {
     "Observation Name": "",
@@ -2923,7 +3169,10 @@
     "URL 2": "",
     "id": 82,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.6727425880001805,
+    "y": 0.7383415688527711,
+    "z": 0.04763546992366212
   },
   {
     "Observation Name": "2S 1417-624",
@@ -2969,7 +3218,10 @@
         "Prime_Instrument": "sxt"
       }
     ],
-    "ISRO details count": 1
+    "ISRO details count": 1,
+    "x": -0.0058061467713754365,
+    "y": -0.10430082015211121,
+    "z": 0.9945288470302237
   },
   {
     "Observation Name": "",
@@ -3003,7 +3255,10 @@
     "URL 2": "",
     "id": 84,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.06308665724292338,
+    "y": 0.9864036161172753,
+    "z": -0.15174972747480267
   },
   {
     "Observation Name": "",
@@ -3037,7 +3292,10 @@
     "URL 2": "",
     "id": 85,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.2177965883086166,
+    "y": 0.9757379287583936,
+    "z": 0.022363821306005942
   },
   {
     "Observation Name": "2S 1553-542",
@@ -3083,7 +3341,10 @@
         "Prime_Instrument": "laxpc2"
       }
     ],
-    "ISRO details count": 1
+    "ISRO details count": 1,
+    "x": -0.7544587834259763,
+    "y": 0.14738701266001974,
+    "z": 0.6395850315716833
   },
   {
     "Observation Name": "",
@@ -3117,7 +3378,10 @@
     "URL 2": "",
     "id": 87,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.286143804567275,
+    "y": 0.9432428716616555,
+    "z": -0.1685663316538586
   },
   {
     "Observation Name": "OAO 1657-415",
@@ -3174,7 +3438,10 @@
         "Prime_Instrument": "laxpc1"
       }
     ],
-    "ISRO details count": 2
+    "ISRO details count": 2,
+    "x": 0.650963698223336,
+    "y": 0.3618788064763776,
+    "z": -0.6673005267633393
   },
   {
     "Observation Name": "",
@@ -3208,7 +3475,10 @@
     "URL 2": "",
     "id": 89,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.0020522680829674037,
+    "y": -0.05348631782300043,
+    "z": -0.9985664735016155
   },
   {
     "Observation Name": "",
@@ -3242,7 +3512,10 @@
     "URL 2": "",
     "id": 90,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.5984840571672171,
+    "y": 0.6048695121798888,
+    "z": -0.5253091533106296
   },
   {
     "Observation Name": "",
@@ -3276,7 +3549,10 @@
     "URL 2": "",
     "id": 91,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.3766416203982381,
+    "y": -0.6453138711765494,
+    "z": -0.664613494785447
   },
   {
     "Observation Name": "",
@@ -3310,7 +3586,10 @@
     "URL 2": "",
     "id": 92,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.06431074905925752,
+    "y": 0.6739881436500521,
+    "z": 0.7359375719275337
   },
   {
     "Observation Name": "",
@@ -3344,7 +3623,10 @@
     "URL 2": "",
     "id": 93,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.5554819543418718,
+    "y": 0.014260196652969733,
+    "z": 0.8314063057205865
   },
   {
     "Observation Name": "",
@@ -3378,7 +3660,10 @@
     "URL 2": "",
     "id": 94,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.05283465156008907,
+    "y": 0.6607174737642958,
+    "z": 0.748772942524669
   },
   {
     "Observation Name": "",
@@ -3412,7 +3697,10 @@
     "URL 2": "",
     "id": 95,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.11598547772710947,
+    "y": 0.9602517277138458,
+    "z": -0.25389759427570074
   },
   {
     "Observation Name": "",
@@ -3446,7 +3734,10 @@
     "URL 2": "",
     "id": 96,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.9389028423221094,
+    "y": 0.22372912610600154,
+    "z": -0.26154680424602583
   },
   {
     "Observation Name": "",
@@ -3480,7 +3771,10 @@
     "URL 2": "",
     "id": 97,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.7662294834713915,
+    "y": 0.22985868328518397,
+    "z": 0.6000478017437995
   },
   {
     "Observation Name": "",
@@ -3514,7 +3808,10 @@
     "URL 2": "",
     "id": 98,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.14977642564840857,
+    "y": -0.17644357841619135,
+    "z": -0.9728487477278654
   },
   {
     "Observation Name": "",
@@ -3548,7 +3845,10 @@
     "URL 2": "",
     "id": 99,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.8208855040801348,
+    "y": -0.5619548323229485,
+    "z": 0.10175340593803156
   },
   {
     "Observation Name": "",
@@ -3582,7 +3882,10 @@
     "URL 2": "",
     "id": 100,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.880339449235646,
+    "y": 0.10330690777627125,
+    "z": 0.46295802933439256
   },
   {
     "Observation Name": "",
@@ -3616,7 +3919,10 @@
     "URL 2": "",
     "id": 101,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.36249588109673364,
+    "y": -0.5751323541533347,
+    "z": -0.7333617875196019
   },
   {
     "Observation Name": "",
@@ -3650,7 +3956,10 @@
     "URL 2": "",
     "id": 102,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.6069055500688761,
+    "y": -0.2626317009163107,
+    "z": -0.7501268179244096
   },
   {
     "Observation Name": "",
@@ -3684,7 +3993,10 @@
     "URL 2": "",
     "id": 103,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.11696323350624294,
+    "y": 0.1635593493219218,
+    "z": -0.9795753882459245
   },
   {
     "Observation Name": "",
@@ -3718,7 +4030,10 @@
     "URL 2": "",
     "id": 104,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.6003544668078848,
+    "y": -0.18019524801752448,
+    "z": -0.779168907731644
   },
   {
     "Observation Name": "",
@@ -3752,7 +4067,10 @@
     "URL 2": "",
     "id": 105,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.00982972015226956,
+    "y": -0.7840153162793458,
+    "z": -0.6206636451743612
   },
   {
     "Observation Name": "",
@@ -3786,7 +4104,10 @@
     "URL 2": "",
     "id": 106,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.637153133563644,
+    "y": 0.23866841441499215,
+    "z": -0.732852831304255
   },
   {
     "Observation Name": "",
@@ -3820,7 +4141,10 @@
     "URL 2": "",
     "id": 107,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.05533971117203427,
+    "y": 0.17631586402884478,
+    "z": 0.9827767968664898
   },
   {
     "Observation Name": "",
@@ -3854,7 +4178,10 @@
     "URL 2": "",
     "id": 108,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.07070544822316968,
+    "y": -0.37274156105114,
+    "z": 0.9252375199140597
   },
   {
     "Observation Name": "",
@@ -3888,7 +4215,10 @@
     "URL 2": "",
     "id": 109,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.32245413627902,
+    "y": 0.06819195603314417,
+    "z": 0.9441256204176036
   },
   {
     "Observation Name": "",
@@ -3922,7 +4252,10 @@
     "URL 2": "",
     "id": 110,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.9860970340640186,
+    "y": 0.02473059290289583,
+    "z": -0.1643199232741331
   },
   {
     "Observation Name": "",
@@ -3956,7 +4289,10 @@
     "URL 2": "",
     "id": 111,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.8329777540113057,
+    "y": -0.3438071034445272,
+    "z": -0.4335259357216876
   },
   {
     "Observation Name": "",
@@ -3990,7 +4326,10 @@
     "URL 2": "",
     "id": 112,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.04416971082665495,
+    "y": 0.01825377197755827,
+    "z": -0.9988572653057498
   },
   {
     "Observation Name": "",
@@ -4024,7 +4363,10 @@
     "URL 2": "",
     "id": 113,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.12080496521862485,
+    "y": -0.46480695926280685,
+    "z": -0.8771320601821543
   },
   {
     "Observation Name": "",
@@ -4058,7 +4400,10 @@
     "URL 2": "",
     "id": 114,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.4460955315448028,
+    "y": 0.2207905968932549,
+    "z": -0.8673236357088858
   },
   {
     "Observation Name": "",
@@ -4092,7 +4437,10 @@
     "URL 2": "",
     "id": 115,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.2739695579581508,
+    "y": 0.3630479457643848,
+    "z": 0.8905823209498803
   },
   {
     "Observation Name": "",
@@ -4126,7 +4474,10 @@
     "URL 2": "",
     "id": 116,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.1719946020734866,
+    "y": 0.4641514942590497,
+    "z": 0.8688965687782835
   },
   {
     "Observation Name": "",
@@ -4160,7 +4511,10 @@
     "URL 2": "",
     "id": 117,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.09944782094592236,
+    "y": -0.0657356104576502,
+    "z": 0.992869055025318
   },
   {
     "Observation Name": "",
@@ -4194,7 +4548,10 @@
     "URL 2": "",
     "id": 118,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.6877420264516473,
+    "y": -0.5607992334663763,
+    "z": -0.4609936277170288
   },
   {
     "Observation Name": "",
@@ -4228,7 +4585,10 @@
     "URL 2": "",
     "id": 119,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.3349750538363654,
+    "y": 0.2506976759146576,
+    "z": -0.9082633916427071
   },
   {
     "Observation Name": "EXO 2030+375",
@@ -4285,7 +4645,10 @@
         "Prime_Instrument": "sxt"
       }
     ],
-    "ISRO details count": 2
+    "ISRO details count": 2,
+    "x": 0.9803169659914336,
+    "y": -0.06457695342990248,
+    "z": 0.18657026364097415
   },
   {
     "Observation Name": "Cyg X-3",
@@ -4331,7 +4694,10 @@
         "Prime_Instrument": "sxt"
       }
     ],
-    "ISRO details count": 1
+    "ISRO details count": 1,
+    "x": -0.9676288644209294,
+    "y": -0.1061806146188143,
+    "z": 0.22895427014719238
   },
   {
     "Observation Name": "",
@@ -4365,7 +4731,10 @@
     "URL 2": "",
     "id": 122,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.7247785765432085,
+    "y": -0.6435575226952467,
+    "z": -0.24602790485300138
   },
   {
     "Observation Name": "GRO J2058+42",
@@ -4411,7 +4780,10 @@
         "Prime_Instrument": "laxpc2"
       }
     ],
-    "ISRO details count": 1
+    "ISRO details count": 1,
+    "x": -0.5317546289710953,
+    "y": -0.6379811657932056,
+    "z": 0.55697131583319
   },
   {
     "Observation Name": "",
@@ -4445,7 +4817,10 @@
     "URL 2": "",
     "id": 124,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.030673607749504485,
+    "y": -0.15375900845043933,
+    "z": 0.9876321669062664
   },
   {
     "Observation Name": "",
@@ -4479,7 +4854,10 @@
     "URL 2": "",
     "id": 125,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.22813287256281123,
+    "y": -0.12502447646739584,
+    "z": -0.9655694033782831
   },
   {
     "Observation Name": "",
@@ -4513,7 +4891,10 @@
     "URL 2": "",
     "id": 126,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.852531356127476,
+    "y": 0.08451883578702717,
+    "z": -0.5157972985744034
   },
   {
     "Observation Name": "",
@@ -4547,7 +4928,10 @@
     "URL 2": "",
     "id": 127,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": -0.23241090035446962,
+    "y": -0.46767445423946497,
+    "z": -0.8527987911859651
   },
   {
     "Observation Name": "",
@@ -4581,7 +4965,10 @@
     "URL 2": "",
     "id": 128,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.024490646011971713,
+    "y": 0.8831658809557312,
+    "z": -0.4684210018494083
   },
   {
     "Observation Name": "",
@@ -4615,6 +5002,9 @@
     "URL 2": "",
     "id": 129,
     "ISRO details": [],
-    "ISRO details count": 0
+    "ISRO details count": 0,
+    "x": 0.00479694874211525,
+    "y": -0.8550740466477408,
+    "z": 0.5184837162652486
   }
 ]
