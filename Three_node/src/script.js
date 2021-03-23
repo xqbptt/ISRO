@@ -13,7 +13,6 @@ const response1 = await fetch("json_data/High_Energy.json");
 const high_energy_json = await response1.json()
 const response2 = await fetch("json_data/Low_Energy.json");
 const low_energy_json = await response2.json()
-console.log(high_energy_json.length);
 
 let nameList = []; //name list for searching
 let highEnergyObjects = [];
@@ -63,7 +62,6 @@ scene.background = new THREE.CubeTextureLoader()
 		'pz.png',
 		'nz.png'
 	] );
-// scene.add(axesHelper);
 
 /**
  * Celestial Sphere
@@ -72,8 +70,8 @@ const textureLoader = new THREE.TextureLoader();
 // base celestial sphere
 let sphereGeom =  new THREE.SphereGeometry( radius, 128 , 128 )
 // Basic wireframe material
-let wireframeMaterial = new THREE.MeshNormalMaterial( { color: 0x000077, transparent: true, opacity: 0.5,  wireframe: true } )
-let sphere = new THREE.Mesh( sphereGeom, wireframeMaterial ) //keeping it wireframe for now
+let wireframeMaterial = new THREE.MeshNormalMaterial( { transparent: true, opacity: 0.5,  wireframe: true } )
+let sphere = new THREE.Mesh( sphereGeom, wireframeMaterial )
 sphere.name = "base";
 scene.add( sphere );
 //Earth material
@@ -155,18 +153,14 @@ const glowLEUnObs = new THREE.SpriteMaterial( {
 
  const geometryStar = new THREE.SphereGeometry( 20, 8 )
  const materialStar = new THREE.MeshBasicMaterial( { color: 0xffffff, transparent: true , opacity:0.5} )
-console.log(high_energy_json)
 for(let i = 0; i<high_energy_json.length; i = i+1)
 {
     // console.log({x, y, z});
     // console.log(i);
-    console.log(high_energy_json[i])
     let star = new THREE.Mesh( geometryStar , materialStar )
-    console.log(high_energy_json[i]["x"])
     star.position.set( radius*parseFloat(high_energy_json[i]["x"]),radius*parseFloat(high_energy_json[i]["y"]),radius*parseFloat(high_energy_json[i]["z"]))
     star.name = high_energy_json[i]["Name"]
-    nameList.push(star.name) //for searching
-    console.log(star.position)
+    nameList.push({name: star.name,pos: star.position}) //for searching
     star.info = high_energy_json[i]
     targetListAll.push(star)
     let sprite
@@ -180,9 +174,6 @@ for(let i = 0; i<high_energy_json.length; i = i+1)
         HEUnObserved.push(star)
         sprite = new THREE.Sprite(glowHEUnObs)
     }
-    console.log(star.ID)
-    
-    
     sprite.scale.set(400, 400, 1)   
     star.add(sprite)
     scene.add( star );
@@ -190,14 +181,9 @@ for(let i = 0; i<high_energy_json.length; i = i+1)
 
 for(let i = 0; i<low_energy_json.length; i = i+1)
 {
-    // console.log({x, y, z});
-    // console.log(i);
-    console.log(low_energy_json[i])
     let star = new THREE.Mesh( geometryStar , materialStar )
-    console.log(low_energy_json[i]["x"])
     star.position.set( radius*parseFloat(low_energy_json[i]["x"]),radius*parseFloat(low_energy_json[i]["y"]),radius*parseFloat(low_energy_json[i]["z"]))
     star.name = low_energy_json[i]["Name"]
-    console.log(star.position)
     star.info = low_energy_json[i]
     targetListAll.push(star)
     let sprite
@@ -211,9 +197,7 @@ for(let i = 0; i<low_energy_json.length; i = i+1)
         LEUnobserved.push(star)
         sprite = new THREE.Sprite(glowLEUnObs)
     }
-    console.log(star.ID)
-    
-    
+    nameList.push({name: star.name,pos: star.position}) 
     sprite.scale.set(400, 400, 1)   
     star.add(sprite)
     scene.add( star );
@@ -253,26 +237,25 @@ controls.enableDamping = true;
 /**
  * Mouse Click
  */
-console.log("adding event listener")
 document.addEventListener('click', (event) => {
-    console.log("Click.");
 	// update the mouse variable
 	mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
 	mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 	// find intersections
     raycaster.setFromCamera( mouse, camera );
-    const intersects = raycaster.intersectObjects( targetListObserved );
+    const intersects = raycaster.intersectObjects( targetListAll );
     if(intersects.length>0){
         let intersected_object = intersects[0];
-        console.log("Hit " );
         if ( intersected_object.object.name )
         {
             let info = intersected_object.object.info;
             let modal = document.getElementById("myModal");
-            console.log(modal)
             let span = document.getElementsByClassName("close")[0];
-            document.getElementById("name").innerHTML = info["Name"]
-            document.getElementById("obs_name").innerHTML = info["Observation Name"]
+            document.getElementById("name").innerHTML =  info["Name"]
+            if(info["ISRO Observed"]=="TRUE")
+                document.getElementById("obs_name").innerHTML = "The source, as observed by ISRO has been named " + info["Observation Name"]
+            else
+                document.getElementById("obs_name").innerHTML = "The source has not been observed by ISRO"
             document.getElementById("rt_asc_hr").innerHTML = info["RA (h)"];
             document.getElementById("rt_asc_mn").innerHTML = info["RA (min)"];
             document.getElementById("rt_asc_sc").innerHTML = info["RA (sec)"];
@@ -304,7 +287,6 @@ document.addEventListener('click', (event) => {
                 url2.href = info["URL 2"]
                 pub2.innerHTML = info["Title 2"]
             }
-            console.log(info["ISRO Details"])
             modal.style.display = "block";
             span.onclick = function() {
                 modal.style.display = "none";
@@ -354,7 +336,6 @@ HEbutton.onclick = ()=>{
             highEnergyObjects[i].visible = true
         }
     }
-    console.log(highEnergyObjects)
 }
 LEbutton.onclick = ()=>{
     if(lowEnergyObjects[0].visible)
@@ -368,7 +349,6 @@ LEbutton.onclick = ()=>{
             lowEnergyObjects[i].visible = true
         }
     }
-    console.log(lowEnergyObjects)
 }
 HEnobsButton.onclick = ()=>{
     if(HEUnObserved[0].visible)
@@ -425,11 +405,6 @@ const tick = () =>
 
 	// calculate objects intersecting the picking ray
 	const intersects = raycaster.intersectObjects( targetListAll );
-
-	for ( let i = 0; i < intersects.length; i ++ ) {
-
-		console.log(intersects[ i ].object.material)
-	}
     if(intersects.length>0){
         if ( intersects[ 0 ].object != intersected)
 		{
@@ -447,7 +422,6 @@ const tick = () =>
 			// update text, if it has a "name" field.
 			if ( intersects[ 0 ].object.name )
 			{
-                console.log(intersected.name)
                 gsap.to(intersected.scale, { duration: .5, delay: 0, x: 2,y: 2,z: 2 })
                 tooltip.innerHTML = intersected.name
                 tooltip.style.display = "block"
@@ -478,20 +452,26 @@ const tick = () =>
 
     //get required elements
     const searchBox = document.getElementById("searchBox")
-    const searchBtn = document.getElementById("search-btn")
-    searchBtn.onsubmit = (e) => {
-        console.log(e.target.value)
-        // search this value in namelist
-    }
-        searchBox.onkeyup = (e)=>{
-        console.log(e.target.value);
-        console.log(e.key)
-        if (e.key === 13) {
-            // Cancel the default action, if needed
-            e.preventDefault();
+    searchBox.onkeyup = (e)=>{
+    if (e.key === "Enter") {
+        // Cancel the default action, if needed
+        e.preventDefault();
+        let found = false;
+        let input = e.target.value;
+        for(let i =0; i<nameList.length; i=i+1) {
+            console.log(nameList[i].name === input)
+            if(nameList[i].name == input) {
+                found = true
+                searchBox.style.background = "#2d3436"
+                gsap.to(camera.position, { duration: 1, delay: 0, x: nameList[i].pos.x*1.5,y: nameList[i].pos.y*1.5,z: nameList[i].pos.z*1.5 })
+                // camera.position.set(nameList[i].pos.x*1.5,nameList[i].pos.y*1.5,nameList[i].pos.z*1.5)
+                break;
+            }
         }
+        if(!found)
+            searchBox.style.background = "#990000"
     }
-    //attach keydown event
+    }
     
 
 
