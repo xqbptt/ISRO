@@ -27,7 +27,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 0
+    "id": 0,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -57,7 +59,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 1
+    "id": 1,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -87,7 +91,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 2
+    "id": 2,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "LMC X-2",
@@ -117,7 +123,43 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 3
+    "id": 3,
+    "ISRO details": [
+      {
+        "Serial Number": "607",
+        "Observation_Timestamp": "2020-04-19 09:01:00",
+        "Proposal_ID": "T03_191",
+        "Target_ID": "T01",
+        "RA": "80.116833",
+        "Dec": "-71.964806",
+        "Observation_ID": "T03_191T01_9000003618",
+        "Source_Name": "LMC X-2",
+        "Prime_Instrument": "sxt"
+      },
+      {
+        "Serial Number": "706",
+        "Observation_Timestamp": "2020-08-24 15:30:23",
+        "Proposal_ID": "A09_095",
+        "Target_ID": "T02",
+        "RA": "80.116833",
+        "Dec": "-71.964806",
+        "Observation_ID": "A09_095T02_9000003840",
+        "Source_Name": "LMC X-2",
+        "Prime_Instrument": "sxt"
+      },
+      {
+        "Serial Number": "709",
+        "Observation_Timestamp": "2020-08-27 01:42:53",
+        "Proposal_ID": "A09_095",
+        "Target_ID": "T02",
+        "RA": "80.116833",
+        "Dec": "-71.964806",
+        "Observation_ID": "A09_095T02_9000003846",
+        "Source_Name": "LMC X-2",
+        "Prime_Instrument": "sxt"
+      }
+    ],
+    "ISRO details count": 3
   },
   {
     "Observation Name": "",
@@ -147,7 +189,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 4
+    "id": 4,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -177,7 +221,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 5
+    "id": 5,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -207,7 +253,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 6
+    "id": 6,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -237,7 +285,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 7
+    "id": 7,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -267,7 +317,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 8
+    "id": 8,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -297,7 +349,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 9
+    "id": 9,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -327,7 +381,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 10
+    "id": 10,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -357,7 +413,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 11
+    "id": 11,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -387,7 +445,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 12
+    "id": 12,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -417,7 +477,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 13
+    "id": 13,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -447,7 +509,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 14
+    "id": 14,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -477,7 +541,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 15
+    "id": 15,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -507,7 +573,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 16
+    "id": 16,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -537,7 +605,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 17
+    "id": 17,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -567,7 +637,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 18
+    "id": 18,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -597,7 +669,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 19
+    "id": 19,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -627,7 +701,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 20
+    "id": 20,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -657,7 +733,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 21
+    "id": 21,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -687,7 +765,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 22
+    "id": 22,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -717,7 +797,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 23
+    "id": 23,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -747,7 +829,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 24
+    "id": 24,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -777,7 +861,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 25
+    "id": 25,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -807,7 +893,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 26
+    "id": 26,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -837,7 +925,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 27
+    "id": 27,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "4U 1608-52",
@@ -867,7 +957,21 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 28
+    "id": 28,
+    "ISRO details": [
+      {
+        "Serial Number": "669",
+        "Observation_Timestamp": "2020-07-14 01:35:03",
+        "Proposal_ID": "T03_214",
+        "Target_ID": "T01",
+        "RA": "243.179167",
+        "Dec": "-52.423056",
+        "Observation_ID": "T03_214T01_9000003758",
+        "Source_Name": "4U 1608-52",
+        "Prime_Instrument": "sxt"
+      }
+    ],
+    "ISRO details count": 1
   },
   {
     "Observation Name": "",
@@ -897,7 +1001,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 29
+    "id": 29,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -927,7 +1033,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 30
+    "id": 30,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -957,7 +1065,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 31
+    "id": 31,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "4u1630-472",
@@ -987,7 +1097,32 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 32
+    "id": 32,
+    "ISRO details": [
+      {
+        "Serial Number": "5",
+        "Observation_Timestamp": "2018-09-11 10:40:04",
+        "Proposal_ID": "T02_100",
+        "Target_ID": "T01",
+        "RA": "248.506708",
+        "Dec": "-47.393",
+        "Observation_ID": "T02_100T01_9000002354",
+        "Source_Name": "4u1630-472",
+        "Prime_Instrument": "laxpc1"
+      },
+      {
+        "Serial Number": "14",
+        "Observation_Timestamp": "2018-09-17 03:19:24",
+        "Proposal_ID": "T02_101",
+        "Target_ID": "T01",
+        "RA": "248.506708",
+        "Dec": "-47.393",
+        "Observation_ID": "T02_101T01_9000002372",
+        "Source_Name": "4u1630-472",
+        "Prime_Instrument": "laxpc1"
+      }
+    ],
+    "ISRO details count": 2
   },
   {
     "Observation Name": "",
@@ -1017,7 +1152,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 33
+    "id": 33,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1047,7 +1184,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 34
+    "id": 34,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "GX 340+0",
@@ -1077,7 +1216,109 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 35
+    "id": 35,
+    "ISRO details": [
+      {
+        "Serial Number": "281",
+        "Observation_Timestamp": "2019-05-01 16:55:48",
+        "Proposal_ID": "A06_009",
+        "Target_ID": "T02",
+        "RA": "251.44875",
+        "Dec": "-45.611111",
+        "Observation_ID": "A06_009T02_9000002882",
+        "Source_Name": "GX 340+0",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "319",
+        "Observation_Timestamp": "2019-06-29 00:53:40",
+        "Proposal_ID": "A06_009",
+        "Target_ID": "T02",
+        "RA": "251.44875",
+        "Dec": "-45.611111",
+        "Observation_ID": "A06_009T02_9000003006",
+        "Source_Name": "GX 340+0",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "338",
+        "Observation_Timestamp": "2019-07-19 04:28:55",
+        "Proposal_ID": "A06_009",
+        "Target_ID": "T02",
+        "RA": "251.44875",
+        "Dec": "-45.611111",
+        "Observation_ID": "A06_009T02_9000003044",
+        "Source_Name": "GX 340+0",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "353",
+        "Observation_Timestamp": "2019-08-06 21:39:35",
+        "Proposal_ID": "A06_009",
+        "Target_ID": "T02",
+        "RA": "251.44875",
+        "Dec": "-45.611111",
+        "Observation_ID": "A06_009T02_9000003076",
+        "Source_Name": "GX 340+0",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "380",
+        "Observation_Timestamp": "2019-08-28 11:52:35",
+        "Proposal_ID": "A06_009",
+        "Target_ID": "T02",
+        "RA": "251.44875",
+        "Dec": "-45.611111",
+        "Observation_ID": "A06_009T02_9000003130",
+        "Source_Name": "GX 340+0",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "391",
+        "Observation_Timestamp": "2019-09-10 12:21:26",
+        "Proposal_ID": "A06_009",
+        "Target_ID": "T02",
+        "RA": "251.44875",
+        "Dec": "-45.611111",
+        "Observation_ID": "A06_009T02_9000003152",
+        "Source_Name": "GX 340+0",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "397",
+        "Observation_Timestamp": "2019-09-17 20:55:52",
+        "Proposal_ID": "A06_009",
+        "Target_ID": "T02",
+        "RA": "251.44875",
+        "Dec": "-45.611111",
+        "Observation_ID": "A06_009T02_9000003170",
+        "Source_Name": "GX 340+0",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "409",
+        "Observation_Timestamp": "2019-09-23 13:23:11",
+        "Proposal_ID": "A06_009",
+        "Target_ID": "T02",
+        "RA": "251.44875",
+        "Dec": "-45.611111",
+        "Observation_ID": "A06_009T02_9000003194",
+        "Source_Name": "GX 340+0",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "734",
+        "Observation_Timestamp": "2020-09-19 15:25:40",
+        "Proposal_ID": "A09_134",
+        "Target_ID": "T01",
+        "RA": "251.44875",
+        "Dec": "-45.611111",
+        "Observation_ID": "A09_134T01_9000003896",
+        "Source_Name": "GX 340+0",
+        "Prime_Instrument": "laxpc2"
+      }
+    ],
+    "ISRO details count": 9
   },
   {
     "Observation Name": "",
@@ -1107,7 +1348,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 36
+    "id": 36,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "Her X-1",
@@ -1137,7 +1380,32 @@
     "URL 2": "https://ui.adsabs.harvard.edu/abs/2020ApJ...889..131L",
     "Title 3": "AstroSat SXT Observations of Her X-1",
     "URL 3": "https://ui.adsabs.harvard.edu/abs/2019ApJ...871..152L",
-    "id": 37
+    "id": 37,
+    "ISRO details": [
+      {
+        "Serial Number": "15",
+        "Observation_Timestamp": "2018-09-17 08:09:52",
+        "Proposal_ID": "A04_230",
+        "Target_ID": "T01",
+        "RA": "254.457542",
+        "Dec": "35.342333",
+        "Observation_ID": "A04_230T01_9000002374",
+        "Source_Name": "Her X-1",
+        "Prime_Instrument": "laxpc1"
+      },
+      {
+        "Serial Number": "564",
+        "Observation_Timestamp": "2020-02-20 23:33:48",
+        "Proposal_ID": "A07_113",
+        "Target_ID": "T01",
+        "RA": "254.457542",
+        "Dec": "35.342333",
+        "Observation_ID": "A07_113T01_9000003526",
+        "Source_Name": "Her X-1",
+        "Prime_Instrument": "uvit1"
+      }
+    ],
+    "ISRO details count": 2
   },
   {
     "Observation Name": "",
@@ -1167,7 +1435,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 38
+    "id": 38,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1197,7 +1467,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 39
+    "id": 39,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "GX 349+2",
@@ -1227,7 +1499,32 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 40
+    "id": 40,
+    "ISRO details": [
+      {
+        "Serial Number": "392",
+        "Observation_Timestamp": "2019-09-10 15:09:33",
+        "Proposal_ID": "A06_009",
+        "Target_ID": "T05",
+        "RA": "256.435375",
+        "Dec": "-36.423069",
+        "Observation_ID": "A06_009T05_9000003154",
+        "Source_Name": "GX 349+2",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "410",
+        "Observation_Timestamp": "2019-09-23 19:06:01",
+        "Proposal_ID": "A06_009",
+        "Target_ID": "T05",
+        "RA": "256.435375",
+        "Dec": "-36.423069",
+        "Observation_ID": "A06_009T05_9000003196",
+        "Source_Name": "GX 349+2",
+        "Prime_Instrument": "laxpc2"
+      }
+    ],
+    "ISRO details count": 2
   },
   {
     "Observation Name": "4U 1702-429",
@@ -1257,7 +1554,21 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 41
+    "id": 41,
+    "ISRO details": [
+      {
+        "Serial Number": "355",
+        "Observation_Timestamp": "2019-08-08 13:25:31",
+        "Proposal_ID": "A06_002",
+        "Target_ID": "T03",
+        "RA": "256.563808",
+        "Dec": "-43.035747",
+        "Observation_ID": "A06_002T03_9000003080",
+        "Source_Name": "4U 1702-429",
+        "Prime_Instrument": "laxpc2"
+      }
+    ],
+    "ISRO details count": 1
   },
   {
     "Observation Name": "",
@@ -1287,7 +1598,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 42
+    "id": 42,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1317,7 +1630,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 43
+    "id": 43,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "4U 1705-44",
@@ -1347,7 +1662,32 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 44
+    "id": 44,
+    "ISRO details": [
+      {
+        "Serial Number": "685",
+        "Observation_Timestamp": "2020-08-07 23:22:58",
+        "Proposal_ID": "A09_044",
+        "Target_ID": "T01",
+        "RA": "257.226958",
+        "Dec": "-44.102042",
+        "Observation_ID": "A09_044T01_9000003792",
+        "Source_Name": "4U 1705-44",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "730",
+        "Observation_Timestamp": "2020-09-18 15:02:38",
+        "Proposal_ID": "A09_044",
+        "Target_ID": "T01",
+        "RA": "257.226958",
+        "Dec": "-44.102042",
+        "Observation_ID": "A09_044T01_9000003888",
+        "Source_Name": "4U 1705-44",
+        "Prime_Instrument": "laxpc2"
+      }
+    ],
+    "ISRO details count": 2
   },
   {
     "Observation Name": "",
@@ -1377,7 +1717,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 45
+    "id": 45,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1407,7 +1749,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 46
+    "id": 46,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1437,7 +1781,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 47
+    "id": 47,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1467,7 +1813,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 48
+    "id": 48,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1497,7 +1845,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 49
+    "id": 49,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1527,7 +1877,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 50
+    "id": 50,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1557,7 +1909,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 51
+    "id": 51,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1587,7 +1941,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 52
+    "id": 52,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1617,7 +1973,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 53
+    "id": 53,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1647,7 +2005,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 54
+    "id": 54,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1677,7 +2037,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 55
+    "id": 55,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "4U 1728-34",
@@ -1707,7 +2069,43 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 56
+    "id": 56,
+    "ISRO details": [
+      {
+        "Serial Number": "285",
+        "Observation_Timestamp": "2019-05-04 11:14:54",
+        "Proposal_ID": "A05_229",
+        "Target_ID": "T02",
+        "RA": "262.991671",
+        "Dec": "-33.83528",
+        "Observation_ID": "A05_229T02_9000002890",
+        "Source_Name": "4U 1728-34",
+        "Prime_Instrument": "laxpc1"
+      },
+      {
+        "Serial Number": "346",
+        "Observation_Timestamp": "2019-07-25 03:08:48",
+        "Proposal_ID": "A05_229",
+        "Target_ID": "T02",
+        "RA": "262.991671",
+        "Dec": "-33.83528",
+        "Observation_ID": "A05_229T02_9000003060",
+        "Source_Name": "4U 1728-34",
+        "Prime_Instrument": "laxpc1"
+      },
+      {
+        "Serial Number": "382",
+        "Observation_Timestamp": "2019-08-29 05:54:29",
+        "Proposal_ID": "A06_002",
+        "Target_ID": "T01",
+        "RA": "262.990542",
+        "Dec": "-33.834028",
+        "Observation_ID": "A06_002T01_9000003134",
+        "Source_Name": "4U 1728-34",
+        "Prime_Instrument": "laxpc2"
+      }
+    ],
+    "ISRO details count": 3
   },
   {
     "Observation Name": "GX 9+9",
@@ -1737,7 +2135,21 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 57
+    "id": 57,
+    "ISRO details": [
+      {
+        "Serial Number": "677",
+        "Observation_Timestamp": "2020-07-25 20:38:37",
+        "Proposal_ID": "A09_018",
+        "Target_ID": "T01",
+        "RA": "262.934042",
+        "Dec": "-16.961361",
+        "Observation_ID": "A09_018T01_9000003774",
+        "Source_Name": "GX 9+9",
+        "Prime_Instrument": "laxpc2"
+      }
+    ],
+    "ISRO details count": 1
   },
   {
     "Observation Name": "",
@@ -1767,7 +2179,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 58
+    "id": 58,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1797,7 +2211,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 59
+    "id": 59,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1827,7 +2243,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 60
+    "id": 60,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1857,7 +2275,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 61
+    "id": 61,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1887,7 +2307,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 62
+    "id": 62,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1917,7 +2339,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 63
+    "id": 63,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1947,7 +2371,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 64
+    "id": 64,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -1977,7 +2403,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 65
+    "id": 65,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2007,7 +2435,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 66
+    "id": 66,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "4U 1735-44",
@@ -2037,7 +2467,32 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 67
+    "id": 67,
+    "ISRO details": [
+      {
+        "Serial Number": "286",
+        "Observation_Timestamp": "2019-05-06 20:35:41",
+        "Proposal_ID": "A05_062",
+        "Target_ID": "T01",
+        "RA": "264.742921",
+        "Dec": "-44.45",
+        "Observation_ID": "A05_062T01_9000002892",
+        "Source_Name": "4U 1735-44",
+        "Prime_Instrument": "laxpc1"
+      },
+      {
+        "Serial Number": "381",
+        "Observation_Timestamp": "2019-08-28 15:05:23",
+        "Proposal_ID": "A05_062",
+        "Target_ID": "T01",
+        "RA": "264.742921",
+        "Dec": "-44.45",
+        "Observation_ID": "A05_062T01_9000003132",
+        "Source_Name": "4U 1735-44",
+        "Prime_Instrument": "laxpc1"
+      }
+    ],
+    "ISRO details count": 2
   },
   {
     "Observation Name": "",
@@ -2067,7 +2522,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 68
+    "id": 68,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2097,7 +2554,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 69
+    "id": 69,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2127,7 +2586,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 70
+    "id": 70,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2157,7 +2618,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 71
+    "id": 71,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2187,7 +2650,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 72
+    "id": 72,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2217,7 +2682,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 73
+    "id": 73,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2247,7 +2714,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 74
+    "id": 74,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2277,7 +2746,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 75
+    "id": 75,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2307,7 +2778,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 76
+    "id": 76,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2337,7 +2810,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 77
+    "id": 77,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2367,7 +2842,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 78
+    "id": 78,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2397,7 +2874,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 79
+    "id": 79,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2427,7 +2906,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 80
+    "id": 80,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2457,7 +2938,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 81
+    "id": 81,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2487,7 +2970,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 82
+    "id": 82,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2517,7 +3002,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 83
+    "id": 83,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2547,7 +3034,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 84
+    "id": 84,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2577,7 +3066,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 85
+    "id": 85,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2607,7 +3098,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 86
+    "id": 86,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2637,7 +3130,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 87
+    "id": 87,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2667,7 +3162,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 88
+    "id": 88,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2697,7 +3194,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 89
+    "id": 89,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2727,7 +3226,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 90
+    "id": 90,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2757,7 +3258,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 91
+    "id": 91,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2787,7 +3290,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 92
+    "id": 92,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2817,7 +3322,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 93
+    "id": 93,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2847,7 +3354,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 94
+    "id": 94,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2877,7 +3386,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 95
+    "id": 95,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2907,7 +3418,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 96
+    "id": 96,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2937,7 +3450,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 97
+    "id": 97,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2967,7 +3482,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 98
+    "id": 98,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -2997,7 +3514,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 99
+    "id": 99,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3027,7 +3546,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 100
+    "id": 100,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3057,7 +3578,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 101
+    "id": 101,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3087,7 +3610,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 102
+    "id": 102,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3117,7 +3642,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 103
+    "id": 103,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3147,7 +3674,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 104
+    "id": 104,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3177,7 +3706,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 105
+    "id": 105,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3207,7 +3738,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 106
+    "id": 106,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3237,7 +3770,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 107
+    "id": 107,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3267,7 +3802,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 108
+    "id": 108,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3297,7 +3834,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 109
+    "id": 109,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3327,7 +3866,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 110
+    "id": 110,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3357,7 +3898,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 111
+    "id": 111,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3387,7 +3930,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 112
+    "id": 112,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3417,7 +3962,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 113
+    "id": 113,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "GX 5-1",
@@ -3447,7 +3994,54 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 114
+    "id": 114,
+    "ISRO details": [
+      {
+        "Serial Number": "364",
+        "Observation_Timestamp": "2019-08-17 11:43:03",
+        "Proposal_ID": "A06_009",
+        "Target_ID": "T03",
+        "RA": "270.290542",
+        "Dec": "-25.078925",
+        "Observation_ID": "A06_009T03_9000003098",
+        "Source_Name": "GX 5-1",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "376",
+        "Observation_Timestamp": "2019-08-25 09:25:49",
+        "Proposal_ID": "A06_009",
+        "Target_ID": "T03",
+        "RA": "270.290542",
+        "Dec": "-25.078925",
+        "Observation_ID": "A06_009T03_9000003122",
+        "Source_Name": "GX 5-1",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "379",
+        "Observation_Timestamp": "2019-08-28 09:00:54",
+        "Proposal_ID": "A06_009",
+        "Target_ID": "T03",
+        "RA": "270.290542",
+        "Dec": "-25.078925",
+        "Observation_ID": "A06_009T03_9000003128",
+        "Source_Name": "GX 5-1",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "411",
+        "Observation_Timestamp": "2019-09-24 02:05:15",
+        "Proposal_ID": "A06_009",
+        "Target_ID": "T03",
+        "RA": "270.290542",
+        "Dec": "-25.078925",
+        "Observation_ID": "A06_009T03_9000003198",
+        "Source_Name": "GX 5-1",
+        "Prime_Instrument": "laxpc2"
+      }
+    ],
+    "ISRO details count": 4
   },
   {
     "Observation Name": "",
@@ -3477,7 +4071,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 115
+    "id": 115,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "GX 9+1",
@@ -3507,7 +4103,32 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 116
+    "id": 116,
+    "ISRO details": [
+      {
+        "Serial Number": "284",
+        "Observation_Timestamp": "2019-05-02 12:28:36",
+        "Proposal_ID": "A05_221",
+        "Target_ID": "T01",
+        "RA": "270.384579",
+        "Dec": "-20.52889",
+        "Observation_ID": "A05_221T01_9000002888",
+        "Source_Name": "GX 9+1",
+        "Prime_Instrument": "sxt"
+      },
+      {
+        "Serial Number": "307",
+        "Observation_Timestamp": "2019-05-19 18:23:16",
+        "Proposal_ID": "A05_221",
+        "Target_ID": "T01",
+        "RA": "270.384579",
+        "Dec": "-20.52889",
+        "Observation_ID": "A05_221T01_9000002936",
+        "Source_Name": "GX 9+1",
+        "Prime_Instrument": "sxt"
+      }
+    ],
+    "ISRO details count": 2
   },
   {
     "Observation Name": "",
@@ -3537,7 +4158,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 117
+    "id": 117,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3567,7 +4190,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 118
+    "id": 118,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "SAX J1808.4-3658",
@@ -3597,7 +4222,32 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 119
+    "id": 119,
+    "ISRO details": [
+      {
+        "Serial Number": "377",
+        "Observation_Timestamp": "2019-08-26 00:53:20",
+        "Proposal_ID": "T03_136",
+        "Target_ID": "T01",
+        "RA": "272.11475",
+        "Dec": "-36.978972",
+        "Observation_ID": "T03_136T01_9000003124",
+        "Source_Name": "SAX J1808.4-3658",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "425",
+        "Observation_Timestamp": "2019-10-10 11:08:58",
+        "Proposal_ID": "A07_004",
+        "Target_ID": "T01",
+        "RA": "272.11475",
+        "Dec": "-36.978972",
+        "Observation_ID": "A07_004T01_9000003230",
+        "Source_Name": "SAX J1808.4-3658",
+        "Prime_Instrument": "sxt"
+      }
+    ],
+    "ISRO details count": 2
   },
   {
     "Observation Name": "",
@@ -3627,7 +4277,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 120
+    "id": 120,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3657,7 +4309,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 121
+    "id": 121,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3687,7 +4341,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 122
+    "id": 122,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "GX 17+2",
@@ -3717,7 +4373,54 @@
     "URL 2": "https://ui.adsabs.harvard.edu/abs/2020Ap&SS.365...56A",
     "Title 3": "AstroSat/LAXPC view of GX 17+2: spectral evolution along the Z-track",
     "URL 3": "https://ui.adsabs.harvard.edu/abs/2020Ap&SS.365...41A",
-    "id": 123
+    "id": 123,
+    "ISRO details": [
+      {
+        "Serial Number": "4",
+        "Observation_Timestamp": "2018-09-10 04:06:12",
+        "Proposal_ID": "T02_087",
+        "Target_ID": "T01",
+        "RA": "274.005787",
+        "Dec": "-14.036283",
+        "Observation_ID": "T02_087T01_9000002352",
+        "Source_Name": "GX 17+2",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "384",
+        "Observation_Timestamp": "2019-09-01 07:11:34",
+        "Proposal_ID": "A05_062",
+        "Target_ID": "T02",
+        "RA": "274.005787",
+        "Dec": "-14.036283",
+        "Observation_ID": "A05_062T02_9000003138",
+        "Source_Name": "GX 17+2",
+        "Prime_Instrument": "laxpc1"
+      },
+      {
+        "Serial Number": "694",
+        "Observation_Timestamp": "2020-08-14 21:32:02",
+        "Proposal_ID": "A09_044",
+        "Target_ID": "T02",
+        "RA": "274.005787",
+        "Dec": "-14.036283",
+        "Observation_ID": "A09_044T02_9000003814",
+        "Source_Name": "GX 17+2",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "712",
+        "Observation_Timestamp": "2020-09-08 20:45:40",
+        "Proposal_ID": "A09_044",
+        "Target_ID": "T02",
+        "RA": "274.005787",
+        "Dec": "-14.036283",
+        "Observation_ID": "A09_044T02_9000003852",
+        "Source_Name": "GX 17+2",
+        "Prime_Instrument": "laxpc2"
+      }
+    ],
+    "ISRO details count": 4
   },
   {
     "Observation Name": "",
@@ -3747,7 +4450,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 124
+    "id": 124,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3777,7 +4482,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 125
+    "id": 125,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3807,7 +4514,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 126
+    "id": 126,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3837,7 +4546,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 127
+    "id": 127,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3867,7 +4578,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 128
+    "id": 128,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3897,7 +4610,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 129
+    "id": 129,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3927,7 +4642,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 130
+    "id": 130,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3957,7 +4674,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 131
+    "id": 131,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -3987,7 +4706,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 132
+    "id": 132,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -4017,7 +4738,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 133
+    "id": 133,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -4047,7 +4770,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 134
+    "id": 134,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -4077,7 +4802,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 135
+    "id": 135,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -4107,7 +4834,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 136
+    "id": 136,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -4137,7 +4866,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 137
+    "id": 137,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -4167,7 +4898,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 138
+    "id": 138,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -4197,7 +4930,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 139
+    "id": 139,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -4227,7 +4962,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 140
+    "id": 140,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -4257,7 +4994,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 141
+    "id": 141,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -4287,7 +5026,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 142
+    "id": 142,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -4317,7 +5058,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 143
+    "id": 143,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -4347,7 +5090,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 144
+    "id": 144,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -4377,7 +5122,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 145
+    "id": 145,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -4407,7 +5154,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 146
+    "id": 146,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "",
@@ -4437,7 +5186,9 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 147
+    "id": 147,
+    "ISRO details": [],
+    "ISRO details count": 0
   },
   {
     "Observation Name": "Cyg X-2",
@@ -4467,7 +5218,32 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 148
+    "id": 148,
+    "ISRO details": [
+      {
+        "Serial Number": "348",
+        "Observation_Timestamp": "2019-07-29 16:08:02",
+        "Proposal_ID": "A06_002",
+        "Target_ID": "T02",
+        "RA": "326.171475",
+        "Dec": "38.321407",
+        "Observation_ID": "A06_002T02_9000003064",
+        "Source_Name": "Cyg X-2",
+        "Prime_Instrument": "laxpc2"
+      },
+      {
+        "Serial Number": "415",
+        "Observation_Timestamp": "2019-09-28 10:43:36",
+        "Proposal_ID": "A06_002",
+        "Target_ID": "T02",
+        "RA": "326.171475",
+        "Dec": "38.321407",
+        "Observation_ID": "A06_002T02_9000003206",
+        "Source_Name": "Cyg X-2",
+        "Prime_Instrument": "laxpc2"
+      }
+    ],
+    "ISRO details count": 2
   },
   {
     "Observation Name": "",
@@ -4497,6 +5273,8 @@
     "URL 2": "",
     "Title 3": "",
     "URL 3": "",
-    "id": 149
+    "id": 149,
+    "ISRO details": [],
+    "ISRO details count": 0
   }
 ]
