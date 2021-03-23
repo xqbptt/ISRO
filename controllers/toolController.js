@@ -18,9 +18,7 @@ exports.jsonSendingController = async (req, res) => {
 
   if (fileName === "lowEnergy" || fileName === "highEnergy") {
     try {
-      data = await readPromise(
-        path.resolve(`./assets/data/${fileName}Sources.json`)
-      );
+      data = await readPromise(path.resolve(`./assets/data/${fileName}.json`));
       return res.status(200).json(JSON.parse(data));
     } catch (err) {
       console.log(err);

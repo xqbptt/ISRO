@@ -5,97 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Panel</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css?family=Poppins");
-
-      /* BASIC */
-
-      body {
-        font-family: "Poppins", sans-serif;
-        height: 100vh;
-        background-image: url("./banner1.jpg");
-        margin: 0;
-      }
-      h1 {
-        text-align: center;
-        margin-bottom: 3rem;
-      }
-      .formDiv {
-        width: 90%;
-        max-width: 400px;
-        margin: 0 auto;
-        background-color: #fff;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 10px;
-        box-shadow: 0 30px 60px 0 rgb(0 0 0 / 30%);
-        padding: 2rem 3rem;
-      }
-      .formDiv input {
-        width: 0.1px;
-        height: 0.1px;
-        opacity: 0;
-        overflow: hidden;
-        position: absolute;
-        z-index: -1;
-      }
-
-      .inputfile + label {
-        font-size: 1em;
-        margin-bottom: 2rem;
-        padding: 0.5rem 1.5rem;
-        color: #127da7;
-        background-color: #fff;
-        display: inline-block;
-        cursor: pointer;
-        border: 2px solid #127da7;
-      }
-
-      .inputfile:focus + label,
-      .inputfile + label:hover {
-        color: #39ace7;
-        border-color: #39ace7;
-      }
-      .inputfile + label svg {
-        fill: #127da7;
-      }
-      .inputfile + label:hover svg {
-        fill: #39ace7;
-      }
-      .formDiv button {
-        font-size: 1em;
-        border-radius: 0;
-        border: none;
-        padding: 15px 80px;
-        color: #fff;
-        background-color: #127da7;
-        box-shadow: 0 10px 30px 0 rgb(95 186 233 / 40%);
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        border-radius: 4px;
-      }
-      .formDiv button:hover {
-        background-color: #39ace7;
-      }
-    </style>
   </head>
-
+  <link rel="stylesheet" href="/admin/styles.css" />
   <body>
-    <script>
-      function changeLabelOneName() {
-        let fileOneName = document.getElementById("file1").value;
-        fileOneName = fileOneName.replace(/.*[\/\\]/, "");
-        document.querySelector("#file1 + label").textContent = fileOneName;
-      }
-      function changeLabelTwoName() {
-        let fileTwoName = document.getElementById("file2").value;
-        fileTwoName = fileTwoName.replace(/.*[\/\\]/, "");
-        document.querySelector("#file2 + label").textContent = fileTwoName;
-      }
-    </script>
+    <script src="/admin/index.js"></script>
     <section>
       <form action="/admin" method="POST" enctype="multipart/form-data">
         <header>
@@ -116,13 +29,13 @@
           <h1>Upload both csv files</h1>
           <div>
             <input
-              id="file1"
+              id="fileOne"
               class="inputfile"
               type="file"
               name="fileOne"
-              onchange="changeLabelOneName()"
+              onchange="changeLabelName('One')"
             />
-            <label for="file1">
+            <label for="fileOne">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -133,18 +46,18 @@
                   d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
                 ></path>
               </svg>
-              <span>Choose file one</span>
+              <span>Choose low energy cosmic sources</span>
             </label>
           </div>
           <div>
             <input
-              id="file2"
+              id="fileTwo"
               class="inputfile"
               type="file"
               name="fileTwo"
-              onchange="changeLabelTwoName()"
+              onchange="changeLabelName('Two')"
             />
-            <label for="file2"
+            <label for="fileTwo"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -155,9 +68,32 @@
                   d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
                 ></path>
               </svg>
-              <span> Choose file two</span>
+              <span> Choose high energy cosmic sources</span>
             </label>
           </div>
+          <div>
+            <input
+              id="fileThree"
+              class="inputfile"
+              type="file"
+              name="fileThree"
+              onchange="changeLabelName('Three')"
+            />
+            <label for="fileThree">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="17"
+                viewBox="0 0 20 17"
+              >
+                <path
+                  d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
+                ></path>
+              </svg>
+              <span>Choose astrosat file</span>
+            </label>
+          </div>
+
           <button type="submit">Upload</button>
         </div>
       </form>
