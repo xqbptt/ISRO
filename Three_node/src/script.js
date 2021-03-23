@@ -9,12 +9,17 @@ import {PointerLockControls} from "three/examples/jsm/controls/PointerLockContro
  /**
  * Open JSON file
  */
-const response1 = await fetch("json_data/high_energy_sources.json");
+const response1 = await fetch("json_data/High_Energy.json");
 const high_energy_json = await response1.json()
-const response2 = await fetch("json_data/low_energy_sources.json");
+const response2 = await fetch("json_data/Low_Energy.json");
 const low_energy_json = await response2.json()
 console.log(high_energy_json.length);
-    
+
+let nameList = []; //name list for searching
+let highEnergyObjects = [];
+let lowEnergyObjects = [];
+let HEUnObserved = [];
+let LEUnobserved = [];
 /**
  * Mouse variables
  */
@@ -134,14 +139,14 @@ const glowLE = new THREE.SpriteMaterial( {
     depthTest: false 
 } );
 const glowHEUnObs = new THREE.SpriteMaterial( { 
-    map: textureLoader.load('textures/stars/flare-blue-spikey1.png'), 
+    map: textureLoader.load('textures/stars/flare-red1light.png'), 
     color: 0xffffff,
     transparent: true,
     opacity: 0.5, 
     depthTest: false 
 } );
 const glowLEUnObs = new THREE.SpriteMaterial( { 
-    map: textureLoader.load('textures/stars/flare-blue-purple3.png'), 
+    map: textureLoader.load('textures/stars/flare-green1light.png'), 
     color: 0xffffff, 
     transparent: true,
     opacity: 0.5,
@@ -160,16 +165,19 @@ for(let i = 0; i<high_energy_json.length; i = i+1)
     console.log(high_energy_json[i]["x"])
     star.position.set( radius*parseFloat(high_energy_json[i]["x"]),radius*parseFloat(high_energy_json[i]["y"]),radius*parseFloat(high_energy_json[i]["z"]))
     star.name = high_energy_json[i]["Name"]
+    nameList.push(star.name) //for searching
     console.log(star.position)
     star.info = high_energy_json[i]
     targetListAll.push(star)
     let sprite
     
-    if(high_energy_json[i]["ISRO Observed"] == "True"){
+    if(high_energy_json[i]["ISRO Observed"] == "TRUE"){
+        highEnergyObjects.push(star)
         targetListObserved.push(star)
         sprite = new THREE.Sprite(glowHE)
     }
     else {
+        HEUnObserved.push(star)
         sprite = new THREE.Sprite(glowHEUnObs)
     }
     console.log(star.ID)
@@ -194,11 +202,13 @@ for(let i = 0; i<low_energy_json.length; i = i+1)
     targetListAll.push(star)
     let sprite
     
-    if(low_energy_json[i]["ISRO Observed"] == "True"){
+    if(low_energy_json[i]["ISRO Observed"] == "TRUE"){
         targetListObserved.push(star)
+        lowEnergyObjects.push(star)
         sprite = new THREE.Sprite(glowLE)
     }
     else {
+        LEUnobserved.push(star)
         sprite = new THREE.Sprite(glowLEUnObs)
     }
     console.log(star.ID)
@@ -238,66 +248,6 @@ camera.lookAt(scene.position);
 const controls = new OrbitControls(camera, canvas)
 controls.lookSpeed = 0.01
 controls.enableDamping = true;
-
-/**
- * Stars in background
- */
-//  const r = radius/8, starsGeometry = [ new THREE.BufferGeometry(), new THREE.BufferGeometry() ];
-
-//  const vertices1 = [];
-//  const vertices2 = [];
-
-//  const vertex = new THREE.Vector3();
-
-//  for ( let i = 0; i < 500; i ++ ) {
-
-//      vertex.x = Math.random() * 2 - 1;
-//      vertex.y = Math.random() * 2 - 1;
-//      vertex.z = Math.random() * 2 - 1;
-//      vertex.multiplyScalar( r );
-
-//      vertices1.push( vertex.x, vertex.y, vertex.z );
-
-//  }
-
-//  for ( let i = 0; i < 3000; i ++ ) {
-
-//      vertex.x = Math.random() * 2 - 1;
-//      vertex.y = Math.random() * 2 - 1;
-//      vertex.z = Math.random() * 2 - 1;
-//      vertex.multiplyScalar( r );
-
-//      vertices2.push( vertex.x, vertex.y, vertex.z );
-
-//  }
-
-//  starsGeometry[ 0 ].setAttribute( 'position', new THREE.Float32BufferAttribute( vertices1, 3 ) );
-//  starsGeometry[ 1 ].setAttribute( 'position', new THREE.Float32BufferAttribute( vertices2, 3 ) );
-
-//  const starsMaterials = [
-//      new THREE.PointsMaterial( { color: 0x555555, size: 2, sizeAttenuation: false } ),
-//      new THREE.PointsMaterial( { color: 0x555555, size: 1, sizeAttenuation: false } ),
-//      new THREE.PointsMaterial( { color: 0x333333, size: 2, sizeAttenuation: false } ),
-//      new THREE.PointsMaterial( { color: 0x3a3a3a, size: 1, sizeAttenuation: false } ),
-//      new THREE.PointsMaterial( { color: 0x1a1a1a, size: 2, sizeAttenuation: false } ),
-//      new THREE.PointsMaterial( { color: 0x1a1a1a, size: 1, sizeAttenuation: false } )
-//  ];
-
-//  for ( let i = 10; i < 1000; i ++ ) {
-
-//      const stars = new THREE.Points( starsGeometry[ i % 2 ], starsMaterials[ i % 6 ] );
-
-//      stars.rotation.x = Math.random() * 6;
-//      stars.rotation.y = Math.random() * 6;
-//      stars.rotation.z = Math.random() * 6;
-//      stars.scale.setScalar( i * 10 );
-
-//      stars.matrixAutoUpdate = false;
-//      stars.updateMatrix();
-
-//      scene.add( stars );
-
-//  }
 
 
 /**
@@ -340,20 +290,21 @@ document.addEventListener('click', (event) => {
             // displayText.innerHTML = "Publications related to " + intersected_object.object.name;
             let url1 = document.getElementById("pub1")
             let url2 = document.getElementById("pub2")
-            if(info["URL 1"] == "nan")
+            if(info["URL 1"] == "")
                 url1.style.display = "none"
             else{
                 url1.style.display = "block"
                 url1.href = info["URL 1"]
                 pub1.innerHTML = info["Title 1"]
             }
-            if(info["URL 2"] == "nan")
+            if(info["URL 2"] == "")
                 url2.style.display = "none"
             else{
                 url2.style.display = "block"
                 url2.href = info["URL 2"]
                 pub2.innerHTML = info["Title 2"]
             }
+            console.log(info["ISRO Details"])
             modal.style.display = "block";
             span.onclick = function() {
                 modal.style.display = "none";
@@ -383,6 +334,67 @@ toggleButton.onclick = ()=>{
         gsap.to(camera.position, { duration: 1, delay: 0, x: 0,y: 300,z: 2*radius })
     }
        
+}
+/**
+ * Control four modes
+ */
+const HEbutton = document.getElementById("he-button")
+const LEbutton = document.getElementById("le-button")
+const HEnobsButton = document.getElementById("nobs-he-button")
+const LEnobsButton = document.getElementById("nobs-le-button")
+HEbutton.onclick = ()=>{
+    if(highEnergyObjects[0].visible)
+    {
+        for(let i=0; i<highEnergyObjects.length; i = i+1){
+            highEnergyObjects[i].visible = false
+        }
+    }
+    else {
+        for(let i=0; i<highEnergyObjects.length; i = i+1){
+            highEnergyObjects[i].visible = true
+        }
+    }
+    console.log(highEnergyObjects)
+}
+LEbutton.onclick = ()=>{
+    if(lowEnergyObjects[0].visible)
+    {
+        for(let i=0; i<lowEnergyObjects.length; i = i+1){
+            lowEnergyObjects[i].visible = false
+        }
+    }
+    else {
+        for(let i=0; i<lowEnergyObjects.length; i = i+1){
+            lowEnergyObjects[i].visible = true
+        }
+    }
+    console.log(lowEnergyObjects)
+}
+HEnobsButton.onclick = ()=>{
+    if(HEUnObserved[0].visible)
+    {
+        for(let i=0; i<HEUnObserved.length; i = i+1){
+            HEUnObserved[i].visible = false
+        }
+    }
+    else {
+        for(let i=0; i<HEUnObserved.length; i = i+1){
+            HEUnObserved[i].visible = true
+        }
+    }
+}
+LEnobsButton.onclick = ()=>{
+    if(LEUnobserved[0].visible)
+    {
+        for(let i=0; i<LEUnobserved.length; i = i+1){
+            LEUnobserved[i].visible = false
+        }
+    }
+    else {
+        for(let i=0; i<LEUnobserved.length; i = i+1){
+            LEUnobserved[i].visible = true
+        }
+    }
 }
 /**
  * Renderer
@@ -460,7 +472,27 @@ const tick = () =>
 		intersected = null;
 	}
 
+    /**
+     * Search Bar
+     */
 
+    //get required elements
+    const searchBox = document.getElementById("searchBox")
+    const searchBtn = document.getElementById("search-btn")
+    searchBtn.onsubmit = (e) => {
+        console.log(e.target.value)
+        // search this value in namelist
+    }
+        searchBox.onkeyup = (e)=>{
+        console.log(e.target.value);
+        console.log(e.key)
+        if (e.key === 13) {
+            // Cancel the default action, if needed
+            e.preventDefault();
+        }
+    }
+    //attach keydown event
+    
 
 
     // Render
