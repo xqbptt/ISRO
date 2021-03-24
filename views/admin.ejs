@@ -9,16 +9,37 @@
   <link rel="stylesheet" href="/admin/styles.css" />
   <body>
     <script src="/admin/index.js"></script>
+    <% if(success){ %>
+    <div id="successContainer">
+      <div class="closeBtn">
+        <img src="/vectors/times-solid.svg" alt="close" />
+      </div>
+      <div class="successMsg">
+        <h3>Files are successfully uploaded!</h3>
+      </div>
+    </div>
+    <% } %>
     <section>
-      <form action="/admin" method="POST" enctype="multipart/form-data">
-        <header>
-          <h1>Hello <%= name %></h1>
-          <%if (success) { %>
-          <h2 style="color: #39ace7; text-align: center">
-            Files are successfully uploaded
-          </h2>
-          <% } %>
-        </header>
+      <div class="nav">
+        <div class="logo">
+          <img src="/vectors/isro_logo.svg" alt="logo" />
+        </div>
+        <div class="adminName">
+          <h2>Hello, <%= name %></h2>
+        </div>
+      </div>
+
+      <form
+        id="uploadForm"
+        action="/admin"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="back-btn">
+          <img src="/vectors/left_arrow.svg" alt="back-btn" />
+          <span>Back</span>
+        </div>
+        <h1>Upload csv files</h1>
         <input
           style="display: none; opacity: 0"
           type="text"
@@ -26,13 +47,13 @@
           value="<%= name %>"
         />
         <div class="formDiv">
-          <h1>Upload both csv files</h1>
           <div>
             <input
               id="fileOne"
               class="inputfile"
               type="file"
               name="fileOne"
+              required
               onchange="changeLabelName('One')"
             />
             <label for="fileOne">
@@ -55,6 +76,7 @@
               class="inputfile"
               type="file"
               name="fileTwo"
+              required
               onchange="changeLabelName('Two')"
             />
             <label for="fileTwo"
@@ -77,6 +99,7 @@
               class="inputfile"
               type="file"
               name="fileThree"
+              required
               onchange="changeLabelName('Three')"
             />
             <label for="fileThree">
@@ -98,5 +121,20 @@
         </div>
       </form>
     </section>
+    <% if(success){ %>
+    <script>
+      document.querySelector("section").style.filter = "blur(5px)";
+    </script>
+    <% } %>
+    <script>
+      document.querySelector(".back-btn").addEventListener("click", () => {
+        window.history.pushState({}, "", "/adminLogin");
+        window.location.reload();
+      });
+      document.querySelector(".closeBtn").addEventListener("click", () => {
+        document.getElementById("successContainer").style.display = "none";
+        document.querySelector("section").style.filter = "blur(0)";
+      });
+    </script>
   </body>
 </html>

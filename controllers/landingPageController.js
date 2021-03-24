@@ -1,7 +1,7 @@
 const { loginData } = require("../secrets/admin");
 
 exports.landingPage = (req, res) => {
-  res.render("index");
+  res.render("landingPage");
 };
 
 exports.adminLogin = (req, res) => {

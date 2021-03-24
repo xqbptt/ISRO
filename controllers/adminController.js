@@ -29,13 +29,6 @@ exports.upload = multer({ storage: storage }).fields([
 ]);
 
 exports.csvUploadController = async (req, res) => {
-  // const storeData = (data, path) => {
-  //   try {
-  //     fs.writeFileSync(path, JSON.stringify(data));
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
   const readCsvStoreJson = async (
     pathToCsvFileA,
     pathToCsvFileB,

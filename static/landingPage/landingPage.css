@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;1,600&display=swap");
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+html {
+  background-color: #1b1b1b;
+}
+
+.container {
+  min-height: 100%;
+  min-width: 100%;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  /* background-color: #000; */
+  position: absolute;
+}
+.container .logo {
+  margin-top: 41px;
+  margin-left: 122px;
+  height: 64px;
+  width: 66px;
+}
+.container .content {
+  margin-top: 108px;
+  margin-left: 122px;
+  display: flex;
+  flex-direction: column;
+}
+.container .content .welcome {
+  width: auto;
+  height: 29px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+.container .content .caption {
+  margin-top: 17px;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 88px;
+  position: relative;
+}
+.container .content .caption .normal-text {
+  color: white;
+}
+.container .content .caption .colored-text {
+  color: #42d7f8;
+}
+.container .content .explore-button {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  width: 240.57px;
+  height: 68px;
+  border: 3px solid #42d7f8;
+  box-sizing: border-box;
+  box-shadow: 12px 4px 41px rgba(66, 215, 248, 0.06);
+  border-radius: 5px;
+  justify-content: space-around;
+  padding: 20px;
+  cursor: pointer;
+}
+.container .content .explore-button .explore-text {
+  width: auto;
+  height: 29px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #42d7f8;
+  margin-top: -4px;
+}
+.container .content .admin-link {
+  margin-top: 23px;
+  width: auto;
+  height: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration-line: underline;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=landingPage.css.map */

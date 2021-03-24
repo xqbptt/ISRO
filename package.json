@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon app.js",
     "production": "pm2 start app.js",
+    "heroku": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
