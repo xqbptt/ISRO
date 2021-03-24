@@ -327,11 +327,15 @@ const LEnobsButton = document.getElementById("nobs-le-button")
 HEbutton.onclick = ()=>{
     if(highEnergyObjects[0].visible)
     {
+        HEbutton.children[0].style.background = "#2d3436"
+        HEbutton.children[0].style.border = "solid 5px rgb(175, 33, 62)"
         for(let i=0; i<highEnergyObjects.length; i = i+1){
             highEnergyObjects[i].visible = false
         }
     }
     else {
+        HEbutton.children[0].style.background = "rgb(175, 33, 62)"
+        HEbutton.children[0].style.border = "solid 5px #2d3436"
         for(let i=0; i<highEnergyObjects.length; i = i+1){
             highEnergyObjects[i].visible = true
         }
@@ -340,11 +344,15 @@ HEbutton.onclick = ()=>{
 LEbutton.onclick = ()=>{
     if(lowEnergyObjects[0].visible)
     {
+        LEbutton.children[0].style.background = "#2d3436"
+        LEbutton.children[0].style.border = "solid 5px rgb(4, 160, 95)n"
         for(let i=0; i<lowEnergyObjects.length; i = i+1){
             lowEnergyObjects[i].visible = false
         }
     }
     else {
+        LEbutton.children[0].style.background = "rgb(4, 160, 95)"
+        LEbutton.children[0].style.border = "solid 5px #2d3436"
         for(let i=0; i<lowEnergyObjects.length; i = i+1){
             lowEnergyObjects[i].visible = true
         }
@@ -353,11 +361,15 @@ LEbutton.onclick = ()=>{
 HEnobsButton.onclick = ()=>{
     if(HEUnObserved[0].visible)
     {
+        HEnobsButton.children[0].style.background = "#2d3436"
+        HEnobsButton.children[0].style.border = "solid 5px rgb(84, 36, 138)"
         for(let i=0; i<HEUnObserved.length; i = i+1){
             HEUnObserved[i].visible = false
         }
     }
     else {
+        HEnobsButton.children[0].style.background = "rgb(84, 36, 138)"
+        HEnobsButton.children[0].style.border = "solid 5px #2d3436"
         for(let i=0; i<HEUnObserved.length; i = i+1){
             HEUnObserved[i].visible = true
         }
@@ -366,11 +378,15 @@ HEnobsButton.onclick = ()=>{
 LEnobsButton.onclick = ()=>{
     if(LEUnobserved[0].visible)
     {
+        LEnobsButton.children[0].style.background = "#2d3436"
+        LEnobsButton.children[0].style.border = "solid 5px rgb(125, 156, 38)"
         for(let i=0; i<LEUnobserved.length; i = i+1){
             LEUnobserved[i].visible = false
         }
     }
     else {
+        LEnobsButton.children[0].style.background = "rgb(125, 156, 38)"
+        LEnobsButton.children[0].style.border = "solid 5px #2d3436"
         for(let i=0; i<LEUnobserved.length; i = i+1){
             LEUnobserved[i].visible = true
         }
@@ -424,6 +440,7 @@ const tick = () =>
 			{
                 gsap.to(intersected.scale, { duration: .5, delay: 0, x: 2,y: 2,z: 2 })
                 tooltip.innerHTML = intersected.name
+                console.log(tooltip.innerHTML)
                 tooltip.style.display = "block"
             }
 			else

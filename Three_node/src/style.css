@@ -1,18 +1,29 @@
-
-body{
+* {
     margin: 0;
+    padding: 0;
+}
+body{
     font-family: "Abel";
+}
+html, body{
+  overflow:hidden;
 }
 #c {
     width: 100%;  /* let our container decide our size */
     height: 100%;
     display: block;
 }
-#container {
-  position: relative;  /* makes this the origin of its children */
+#container { /* makes this the origin of its children */
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+#container .webgl {
+  position:fixed;
+  top:0;
+  left:0;
+  outline:none;
+  z-index: -1;
 }
 #labels {
   position: absolute;  /* let us position ourself inside the container */
@@ -24,19 +35,13 @@ body{
     position: absolute;  /* let us position them inside the container */
     left: 0;             /* make their default position the top left of the container */
     top: 0;
+    white-space: nowrap;
+    width:auto;
     /*cursor: pointer;     /* change the cursor to a hand when over us */
     font-size: large;
     user-select: none;   /* don't let the text get selected */
-    text-shadow:         /* create a black outline */
-      -1px -1px 0 #000,
-       0   -1px 0 #000,
-       1px -1px 0 #000,
-       1px  0   0 #000,
-       1px  1px 0 #000,
-       0    1px 0 #000,
-      -1px  1px 0 #000,
-      -1px  0   0 #000;
-      color: white;
+    font-weight: bold;
+    color: white;
   }
 
   /* TOGGLE BUTTON */
@@ -79,7 +84,7 @@ body{
     position: absolute;
     right: 30px;
     top: 100px; 
-    width: 150px;
+    width: 227px;
     height: 40px;
     background: crimson;
     border-radius: 40px;
@@ -88,18 +93,15 @@ body{
     justify-content: center;
     padding: 0px 30px;
     overflow: hidden;
+    font-weight: bold;
     cursor: pointer;
-    transition: .3s linear;
-  }
-  #he-button:hover{
-    transform: scale(1.1);
   }
   #he-button span{
     padding-top: 12px;
     position: absolute;
     width: 100%;
     height: 100%;
-    background: crimson;
+    background: rgb(175, 33, 62);
     color: #f1f1f1;
     text-align: left;
     padding-left: 30px;
@@ -112,28 +114,26 @@ body{
   #le-button {
     position: absolute;
     right: 30px;
-    top: 150px; 
-    width: 150px;
+    top: 200px; 
+    width: 227px;
+    font-weight: bold;
     height: 40px;
     background: lightseagreen;
     border-radius: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .6s linear;
     padding: 0px 30px;
     overflow: hidden;
     cursor: pointer;
-    transition: .3s linear;
-  }
-  #le-button:hover{
-    transform: scale(1.1);
   }
   #le-button span{
     padding-top: 12px;
     position: absolute;
     width: 100%;
     height: 100%;
-    background: green;
+    background: rgb(4, 160, 95);
     color: #f1f1f1;
     text-align: left;
     padding-left: 30px;
@@ -146,10 +146,11 @@ body{
   #nobs-he-button {
     position: absolute;
     right: 30px;
-    top: 200px; 
-    width: 150px;
+    top: 150px; 
+    width: 227px;
+    font-weight: bold;
     height: 40px;
-    background: purple;
+    background: rgb(84, 36, 138);
     border-radius: 40px;
     display: flex;
     align-items: center;
@@ -157,17 +158,14 @@ body{
     padding: 0px 30px;
     overflow: hidden;
     cursor: pointer;
-    transition: .3s linear;
-  }
-  #nobs-he-button:hover{
-    transform: scale(1.1);
+    /* transition: .3s linear; */
   }
   #nobs-he-button span{
     padding-top: 12px;
     position: absolute;
     width: 100%;
     height: 100%;
-    background: purple;
+    background: rgb(84, 36, 138);
     color: #f1f1f1;
     text-align: left;
     padding-left: 30px;
@@ -182,9 +180,10 @@ body{
     position: absolute;
     right: 30px;
     top: 250px; 
-    width: 150px;
+    width: 227px;
+    font-weight: bold;
     height: 40px;
-    background: yellowgreen;
+    background: rgb(125, 156, 38);
     border-radius: 40px;
     display: flex;
     align-items: center;
@@ -193,9 +192,6 @@ body{
     overflow: hidden;
     cursor: pointer;
     transition: .3s linear;
-  }
-  #nobs-le-button:hover{
-    transform: scale(1.1);
   }
   #nobs-le-button span{
     padding-top: 12px;
