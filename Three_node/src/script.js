@@ -256,11 +256,11 @@ document.addEventListener('click', (event) => {
              */
             let pdf_button = document.getElementById("pdf-download")
             pdf_button.addEventListener("click", () => {
-                let el = document.querySelector(".modal-content");
+                let el = document.querySelector("#pdf-container");
                 html2pdf()
                   .from(el)
                   .set({
-                    margin: 0,
+                    margin: 5,
                     filename: info["Name"]+"_astrosat.pdf"
                   })
                   .save();
