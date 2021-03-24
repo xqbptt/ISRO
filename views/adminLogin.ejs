@@ -23,12 +23,14 @@
             type="text"
             id="username"
             name="userName"
+
             placeholder="USERNAME"
             class="input-box"
           />
           <input
             type="password"
             id="password"
+
             name="password"
             placeholder="PASSWORD"
             class="input-box"
@@ -48,7 +50,26 @@
       var signinBtn = document.getElementById("signin-btn");
       var form = document.getElementById("loginForm");
       signinBtn.addEventListener("click", function () {
-       form.submit();
+        const userName= document.getElementById("username");
+        const password = document.getElementById("password");
+
+        if(userName.value && password.value){
+          form.submit();
+        }
+        if(!userName.value){
+         if(!document.getElementById("userNameError")){
+          userName.insertAdjacentHTML('afterend', '<p id="userNameError" style="color:red;">Please enter username</p>');
+         }
+      }else{
+        document.getElementById("userNameError").remove();
+      }
+      if(!password.value){
+if(!document.getElementById("passwordError")){
+  password.insertAdjacentHTML('afterend', '<p  id="passwordError" style="color:red;">Please enter password</p>');
+}
+}else{
+  document.getElementById("passwordError").remove();
+      }
       });
     </script>
       <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
