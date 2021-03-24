@@ -72,7 +72,8 @@ html {
   height: 68px;
   border: 3px solid #42d7f8;
   box-sizing: border-box;
-  box-shadow: 12px 4px 41px rgba(66, 215, 248, 0.06);
+  box-shadow: 12px 4px 41px rgba(66, 215, 248, 0);
+  
   border-radius: 5px;
   justify-content: space-around;
   padding: 20px;
@@ -96,7 +97,7 @@ html {
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 20px;
   text-decoration-line: underline;
   color: #ffffff;
