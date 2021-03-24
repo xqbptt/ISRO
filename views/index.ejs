@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>AstroSat Visualizer</title>
-    <script defer="defer" src="bundle.7064fef2b1763d388778.js"></script>
+    <script defer="defer" src="bundle.6d758c767986d68e2ee8.js"></script>
     <link href="main.css" rel="stylesheet" /></head
   ><link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
   <link rel="icon" href="/vectors/isro_logo.svg" type="image/x-icon" />
@@ -15,113 +15,128 @@
       <div id="myModal" class="modal" role="dialog">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <h1 class="title" id="header">
-            <b>About <span id="name">J0032.9-7348</span></b>
-          </h1>
-          <br />
-          <div class="col-md-6">
-            <div class="card text-center">
-              <div class="card-body">
-                <p>
-                  <span id="obs_name"
-                    >The source, as observed by ISRO has been named SMC-62</span
-                  ><img
-                    id="pdf-download"
-                    title="download data in pdf format"
-                    src="./icons/file-pdf-regular.svg"
-                    alt="pdf"
-                  />
-                </p>
+          <div id="pdf-container">
+            <h1 class="title" id="header">
+              <b>About <span id="name">J0032.9-7348</span></b>
+            </h1>
+            <br />
+            <div class="col-md-6">
+              <div class="card text-center">
+                <div class="card-body">
+                  <p>
+                    <span id="obs_name"
+                      >The source, as observed by ISRO has been named
+                      SMC-62</span
+                    ><img
+                      id="pdf-download"
+                      title="download data in pdf format"
+                      src="./icons/file-pdf-regular.svg"
+                      alt="pdf"
+                    />
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <br />
-          <div class="col-md-6">
-            <div class="card text-center">
-              <div class="card-body">
-                <h1
-                  class="title"
-                  id="celest_coords"
-                  style="font-size: 36px; margin-top: -15px; margin-bottom: 5px"
-                >
-                  <b>Celestial Coordinates</b>
-                </h1>
-                <p>
-                  &#127760; Right Ascension(in hours):
-                  <span id="rt_asc_hr">0</span>
-                </p>
-                <p>
-                  &#127760; Right Ascension(in minutes):
-                  <span id="rt_asc_mn">0</span>
-                </p>
-                <p>
-                  &#127760; Right Ascension(in seconds):
-                  <span id="rt_asc_sc">0</span>
-                </p>
-                <p>
-                  &#127760; Declination (in degrees):
-                  <span id="dec_deg">0</span>
-                </p>
-                <p>
-                  &#127760; Declination (in arcmin):
-                  <span id="dec_acmn">0</span>
-                </p>
-                <p>
-                  &#127760; Declination (in arcsec):
-                  <span id="dec_acsc">0</span>
-                </p>
+            <br />
+            <div class="col-md-6">
+              <div class="card text-center">
+                <div class="card-body">
+                  <h1
+                    class="title"
+                    id="celest_coords"
+                    style="
+                      font-size: 36px;
+                      margin-top: -15px;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    <b>Celestial Coordinates</b>
+                  </h1>
+                  <p>
+                    &#127760; Right Ascension(in hours):
+                    <span id="rt_asc_hr">0</span>
+                  </p>
+                  <p>
+                    &#127760; Right Ascension(in minutes):
+                    <span id="rt_asc_mn">0</span>
+                  </p>
+                  <p>
+                    &#127760; Right Ascension(in seconds):
+                    <span id="rt_asc_sc">0</span>
+                  </p>
+                  <p>
+                    &#127760; Declination (in degrees):
+                    <span id="dec_deg">0</span>
+                  </p>
+                  <p>
+                    &#127760; Declination (in arcmin):
+                    <span id="dec_acmn">0</span>
+                  </p>
+                  <p>
+                    &#127760; Declination (in arcsec):
+                    <span id="dec_acsc">0</span>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="html2pdf__page-break"></div>
-          <br />
-          <div class="col-md-6">
-            <div class="card text-center">
-              <div class="card-body">
-                <p>
-                  &#129680; Galactic Longitude: <span id="gal_long">0</span>
-                </p>
-                <p>&#129680; Galactic Latitude: <span id="gal_lat">0</span></p>
-                <p>&#129680; Position Accuracy: <span id="pos_acc">0</span></p>
-                <p>&#129680; Average Flux: <span id="avg_flux">0</span></p>
-                <p>&#129680; Orbital Period: <span id="orb_per">0</span></p>
-                <p>&#129680; Range: <span id="range">0</span></p>
-                <p>&#129680; Pulse Period:<span id="pls_per"> 0</span></p>
-                <p>&#129680; Spectral Type: <span id="sp_typ">0</span></p>
+            <br />
+            <div class="col-md-6">
+              <div class="card text-center">
+                <div class="card-body">
+                  <p>
+                    &#129680; Galactic Longitude: <span id="gal_long">0</span>
+                  </p>
+                  <p>
+                    &#129680; Galactic Latitude: <span id="gal_lat">0</span>
+                  </p>
+                  <p>
+                    &#129680; Position Accuracy: <span id="pos_acc">0</span>
+                  </p>
+                  <p>&#129680; Average Flux: <span id="avg_flux">0</span></p>
+                  <p>&#129680; Orbital Period: <span id="orb_per">0</span></p>
+                  <p>&#129680; Range: <span id="range">0</span></p>
+                  <p>&#129680; Pulse Period:<span id="pls_per"> 0</span></p>
+                  <p>&#129680; Spectral Type: <span id="sp_typ">0</span></p>
+                </div>
               </div>
             </div>
-          </div>
-          <br />
-          <div id="pub-card" style="display: none" class="col-md-6">
-            <div class="card text-center">
-              <div class="card-body">
-                <h1
-                  class="title"
-                  style="font-size: 36px; margin-top: -15px; margin-bottom: 5px"
-                >
-                  <b>Publications related to the source:</b>
-                </h1>
-                <a
-                  href="https://www.youtube.com"
-                  class="publications"
-                  target="_blank"
-                  id="pub1"
-                  >PAPER 1</a
-                >
-                <a
-                  href="https://www.youtube.com"
-                  class="publications"
-                  target="_blank"
-                  id="pub2"
-                  >PAPER 2</a
-                >
+            <div class="html2pdf__page-break"></div>
+            <br />
+            <div id="pub-card" style="display: none" class="col-md-6">
+              <div class="card text-center">
+                <div class="card-body">
+                  <h1
+                    class="title"
+                    style="
+                      font-size: 36px;
+                      margin-top: -15px;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    <b>Publications related to the source:</b>
+                  </h1>
+                  <a
+                    href="https://www.youtube.com"
+                    class="publications"
+                    target="_blank"
+                    id="pub1"
+                    ><u>Paper 1</u></a
+                  >
+                  <a
+                    href="https://www.youtube.com"
+                    class="publications"
+                    target="_blank"
+                    id="pub2"
+                    ><u>Paper 2</u></a
+                  >
+                </div>
               </div>
             </div>
-          </div>
-          <br />
-          <div class="col-md-6">
-            <div class="card text-center">
-              <div id="obs-det" style="display: none" class="card-body"></div>
+            <br />
+            <div class="col-md-6">
+              <div class="card text-center">
+                <div id="obs-det" style="display: none" class="card-body"></div>
+              </div>
             </div>
           </div>
         </div>
