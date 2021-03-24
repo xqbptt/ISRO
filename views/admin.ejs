@@ -5,14 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Panel</title>
-    <link rel = "icon" href = 
-"/vectors/isro_logo.svg" 
-        type = "image/x-icon">
+    <link rel="icon" href="/vectors/isro_logo.svg" type="image/x-icon" />
   </head>
   <link rel="stylesheet" href="/admin/styles.css" />
   <body>
     <div id="particles-js"></div>
-    <script src="/admin/index.js"></script>
+
     <% if(success){ %>
     <div id="successContainer">
       <div class="closeBtn">
@@ -121,23 +119,24 @@
             </label>
           </div>
 
-          <button type="submit">Upload</button>
+          <button id="submitBtn" type="submit">Upload</button>
         </div>
       </form>
     </section>
+    <script src="/admin/index.js"></script>
     <% if(success){ %>
     <script>
       document.querySelector("section").style.filter = "blur(5px)";
+      document.querySelector(".closeBtn").addEventListener("click", () => {
+        document.getElementById("successContainer").style.display = "none";
+        document.querySelector("section").style.filter = "blur(0)";
+      });
     </script>
     <% } %>
     <script>
       document.querySelector(".back-btn").addEventListener("click", () => {
         window.history.pushState({}, "", "/adminLogin");
         window.location.reload();
-      });
-      document.querySelector(".closeBtn").addEventListener("click", () => {
-        document.getElementById("successContainer").style.display = "none";
-        document.querySelector("section").style.filter = "blur(0)";
       });
     </script>
     <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
