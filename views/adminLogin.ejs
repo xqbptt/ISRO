@@ -11,7 +11,7 @@
     <div class='container'>
       <img class="logo" src='assets/vectors/isro_logo.svg'/>
       <div class="content">
-        <div class="back-button">
+        <div class="back-button" id="back-btn">
           <img class="left-arrow" src="assets/vectors/left_arrow.svg"/>
           <span class="back-text">Back</span>
         </div>
@@ -25,5 +25,16 @@
         </div>
       </div>
     </div>
+    <script>
+      var backBtn = document.getElementById("back-btn")
+      backBtn.addEventListener('click', function() {
+        window.location.assign('/')
+      })
+
+      var signinBtn = document.getElementById("signin-btn")
+      signinBtn.addEventListener('click', function() {
+        window.location.assign('/admin')
+      })
+    </script>
   </body>
 </html>

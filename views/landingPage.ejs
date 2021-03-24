@@ -29,6 +29,17 @@
         </div>
       </div>
     </div>
+    <script>
+      var exploreBtn = document.getElementById("explore-btn")
+      exploreBtn.addEventListener('click', function() {
+        window.location.assign('/visualization')
+      })
+
+      var adminBtn = document.getElementById("admin-link")
+      adminBtn.addEventListener('click', function() {
+        window.location.assign('/adminLogin')
+      })
+    </script>
   </body>
 </html>
 <script src="/assets/js/landingPage.js"></script>
