@@ -7,9 +7,24 @@
 *:focus {
   box-sizing: border-box;
 }
+canvas {
+  display: block;
+}
+#particles-js {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+html {
+  background-color: #1b1b1b;
+}
 body {
   font-family: "Montserrat", sans-serif;
-  background: #000;
+
   margin: 0;
 }
 section {

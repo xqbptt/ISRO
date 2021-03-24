@@ -27,6 +27,9 @@ app.use(express.static("static"));
 app.use("/", landingPageRoutes);
 app.use("/visualization", toolRoutes);
 app.use("/admin", adminRoutes);
+app.get("*", (req, res) => {
+  res.render("notFound");
+});
 
 app.listen(PORT, () => {
   console.log(`App is listening on port ${PORT}`);
