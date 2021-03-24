@@ -4,6 +4,7 @@
 }
 body{
     font-family: "Abel";
+    font-weight: 120;
 }
 html, body{
   overflow:hidden;
@@ -12,6 +13,14 @@ html, body{
     width: 100%;  /* let our container decide our size */
     height: 100%;
     display: block;
+}
+/* pdf icon styling */
+img {
+  position:absolute;
+  width:30px;
+  height:30px;
+  right:20px;
+  top:20px;
 }
 #container { /* makes this the origin of its children */
   width: 100%;
@@ -213,6 +222,7 @@ html, body{
   .modal {
     /* background-image: url(""); */
     visibility: hidden;
+    font-family:"Abel";
     opacity: 0; /* Hidden by default */
     position: absolute; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -226,6 +236,7 @@ html, body{
   }
   .modal-header {
     padding:9px 15px;
+    font-family:"Abel";
     border-bottom:1px solid #eee;
     background-color:  #2d3436;
     -webkit-border-top-left-radius: 5px;
@@ -242,7 +253,7 @@ html, body{
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     width: 40%; /* Could be more or less, depending on screen size */
-    border-radius: 8px !important;
+    border-radius: 40px !important;
   }
   
   /* The Close Button */
@@ -281,25 +292,31 @@ html, body{
     background-color: #2d3436;
     background-clip: border-box;
     color: white;
-    border: 1px solid #2d3436;
-    border-radius: 40px;
+    border: 1px solid #067ea0;
+    border-radius: 15px;
     -webkit-box-shadow: 0px 0px 5px 0px rgb(0, 40, 40);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0, 50, 50, 1);
     box-shadow: 0px 0px 5px 0px rgb(0, 60, 64)
 }
 
 .card .card-body {
-    padding: 1rem 1rem
+    font-size: 20px;
+    padding: 1rem 1rem;
+    line-height: 1.9;
+    text-align:justify;
+    padding: 20px;
 }
 
 .card-body {
     flex: 1 1 auto;
-    padding: 1.25rem
+    padding: 1.25rem;
+    line-height: 1.9;
+    text-align:justify;
 }
 
 .title {
-    font-size: 25px;
-    font-weight: 300;
+    font-size: 55px;
+    font-weight: bold;
     margin-top: 17px;
     color: #ffffff
   
@@ -313,31 +330,21 @@ html, body{
 .mt-30 {
     margin-top: 30px
 }
-.btn-center {
-  margin-top: 200px
-}
-
-.btn:focus {
-  outline: none
-}
-
-.btn {
-  border-radius: 2px;
-  text-transform: capitalize;
-  font-size: 15px;
-  padding: 10px 19px;
-  cursor: pointer;
-  color: #fff;
-  width: 100%
-}
-.button {
-    background-color: #00bfff;
-    color: #FFFFFF;
+.publications {
+    color: skyblue;
     padding: 8px 20px;
     text-decoration:none;
     font-weight:bold;
     border-radius:5px;
     cursor:pointer;
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 320px;
+    position: relative;
+    /* top: 50%;
+    left: 50%; */
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 /* SEARCH BUTTON */

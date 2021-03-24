@@ -17,64 +17,73 @@
         <div id="myModal" class="modal" role="dialog">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h1 class="title" id="header" style="font-family: 'Lucida Console'; color:white; font-size:40px;"><b>About <span id="name">J0032.9-7348</span></b></h1>
+                <h1 class="title" id="header"><b>About <span id="name">J0032.9-7348</span></b></h1>
                 <br>
                 <div class="col-md-6">
                     <div class="card text-center">
                         <div class="card-body"> 
-                            <p style="font-size:20px">&#128752; <span id="obs_name">The source, as observed by ISRO has been named SMC-62</span></p>
+                            <p><span id="obs_name">The source, as observed by ISRO has been named SMC-62</span><a id="pdf-download" title="download data in pdf format"><img src="/icons/file-pdf-regular.svg" alt="pdf"></img></a></p>
                         </div>
                     </div>
                 </div>
-                <br>
+            
                 <br>
                 <div class="col-md-6">
                     <div class="card text-center">
                         <div class="card-body"> 
-                            <h1 class="title" id="celest_coords"><b>Celestial Coordinates</b></h1>
-                            <p style="font-size:20px">&#127760; Right Ascension(in hours): <span id="rt_asc_hr">0</span></p>
-                            <p style="font-size:20px">&#127760; Right Ascension(in minutes): <span id="rt_asc_mn"> 0</span></p>
-                            <p style="font-size:20px">&#127760; Right Ascension(in seconds): <span id="rt_asc_sc"> 0</span></p>
-                            <p style="font-size:20px">&#127760; Declination (in degrees): <span id="dec_deg"> 0</span></p>
-                            <p style="font-size:20px">&#127760; Declination (in arcmin): <span id="dec_acmn"> 0</span></p>
-                            <p style="font-size:20px">&#127760; Declination (in arcsec): <span id="dec_acsc"> 0</span></p>
+                            <h1 class="title" id="celest_coords" style="font-size:36px; margin-top:-15px; margin-bottom:5px;"><b>Celestial Coordinates</b></h1>
+                            
+                            <p>&#127760; Right Ascension(in hours): <span id="rt_asc_hr">0</span></p>
+                            <p>&#127760; Right Ascension(in minutes): <span id="rt_asc_mn"> 0</span></p>
+                            <p>&#127760; Right Ascension(in seconds): <span id="rt_asc_sc"> 0</span></p>
+                            <p>&#127760; Declination (in degrees): <span id="dec_deg"> 0</span></p>
+                            <p>&#127760; Declination (in arcmin): <span id="dec_acmn"> 0</span></p>
+                            <p>&#127760; Declination (in arcsec): <span id="dec_acsc"> 0</span></p>
                             
                         </div>
                         
                     </div>
                 </div>
-                <br>
+                
                 <br>
                 <div class="col-md-6">
                     <div class="card text-center">
                         <div class="card-body"> 
-                            <h1 class="title"><b> </b></h1>
-                            <p style="font-size:20px">&#129680; Galactic Longitude: <span id="gal_long"> 0</span></p>
-                            <p style="font-size:20px">&#129680; Galactic Latitude: <span id="gal_lat"> 0</span></p>
-                            <p style="font-size:20px">&#129680; Position Accuracy: <span id="pos_acc"> 0</span></p>
-                            <p style="font-size:20px">&#129680; Average Flux: <span id="avg_flux"> 0</span></p>
-                            <p style="font-size:20px">&#129680; Orbital Period: <span id="orb_per"> 0</span></p>
-                            <p style="font-size:20px">&#129680; Range: <span id="range"> 0</span></p>
-                            <p style="font-size:20px">&#129680; Pulse Period:<span id="pls_per"> 0</span> </p>
-                            <p style="font-size:20px">&#129680; Spectral Type: <span id="sp_typ"> 0</span></p>
+                            <p>&#129680; Galactic Longitude: <span id="gal_long"> 0</span></p>
+                            <p>&#129680; Galactic Latitude: <span id="gal_lat"> 0</span></p>
+                            <p>&#129680; Position Accuracy: <span id="pos_acc"> 0</span></p>
+                            <p>&#129680; Average Flux: <span id="avg_flux"> 0</span></p>
+                            <p>&#129680; Orbital Period: <span id="orb_per"> 0</span></p>
+                            <p>&#129680; Range: <span id="range"> 0</span></p>
+                            <p>&#129680; Pulse Period:<span id="pls_per"> 0</span> </p>
+                            <p>&#129680; Spectral Type: <span id="sp_typ"> 0</span></p>
                             
                         </div>
                         
                     </div>
                 </div>
+                
                 <br>
-                <br>
-                <div class="col-md-6">
+                <div id="pub-card" style="display:none;" class="col-md-6">
                     <div class="card text-center">
                         <div class="card-body"> 
-                            <h1 class="title"><b> Publications related to the source: </b></h1>
-                            <br>
-                            <a href="https://www.youtube.com" class="button" target="_blank" id="pub1">PAPER 1</a>
-                            <a href="https://www.youtube.com" class="button" target="_blank" id="pub2">PAPER 2</a>
+                            <h1 class="title" style="font-size:36px; margin-top:-15px; margin-bottom:5px;"><b> Publications related to the source: </b></h1>
+                            
+                            <a href="https://www.youtube.com" class="publications" target="_blank" id="pub1">PAPER 1</a>
+                            <a href="https://www.youtube.com" class="publications" target="_blank" id="pub2">PAPER 2</a>
 
                             
                         </div>
                         
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-6">
+                    <div class="card text-center">
+                        
+                        <div id = "obs-det" style="display:none" class="card-body">
+                            
+                        </div>
                     </div>
                 </div>
                 
@@ -104,6 +113,7 @@
         </div>
 
     </div>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
 </body>
 
 </html>

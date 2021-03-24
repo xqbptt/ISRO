@@ -251,6 +251,20 @@ document.addEventListener('click', (event) => {
             let info = intersected_object.object.info;
             let modal = document.getElementById("myModal");
             let span = document.getElementsByClassName("close")[0];
+            /**
+             * pdf download
+             */
+            let pdf_button = document.getElementById("pdf-download")
+            pdf_button.addEventListener("click", () => {
+                let el = document.querySelector(".modal-content");
+                html2pdf()
+                  .from(el)
+                  .set({
+                    margin: 0,
+                    filename: info["Name"]+"_astrosat.pdf"
+                  })
+                  .save();
+              });
             document.getElementById("name").innerHTML =  info["Name"]
             if(info["ISRO Observed"]=="TRUE")
                 document.getElementById("obs_name").innerHTML = "The source, as observed by ISRO has been named " + info["Observation Name"]
@@ -270,23 +284,54 @@ document.addEventListener('click', (event) => {
             document.getElementById("range").innerHTML = info["Range"];
             document.getElementById("pls_per").innerHTML = info["Pulse Period (s)"];
             document.getElementById("sp_typ").innerHTML = info["Spectral Type"];
+
             // displayText.innerHTML = "Publications related to " + intersected_object.object.name;
+            let pub_card = document.getElementById("pub-card")
             let url1 = document.getElementById("pub1")
             let url2 = document.getElementById("pub2")
             if(info["URL 1"] == "")
-                url1.style.display = "none"
+                pub_card.style.display = "none"
             else{
+                pub_card.style.display = "block"
                 url1.style.display = "block"
                 url1.href = info["URL 1"]
-                pub1.innerHTML = info["Title 1"]
+                pub1.innerHTML = "&#10000; " +  info["Title 1"]
             }
             if(info["URL 2"] == "")
                 url2.style.display = "none"
             else{
                 url2.style.display = "block"
                 url2.href = info["URL 2"]
-                pub2.innerHTML = info["Title 2"]
+                pub2.innerHTML = "&#10000; " +  info["Title 2"]
             }
+
+            // Observation details
+            let obs_details = document.getElementById("obs-det")
+            console.log(info["ISRO details"])
+            if(info["ISRO details"].length==0){
+                obs_details.innerHTML = "";
+                obs_details.style.display = "none";
+            }
+            else {
+                obs_details.style.display = "block"
+                obs_details.innerHTML = '<h1 class="title" style="font-size:36px; margin-top:-15px; margin-bottom:0px;"><b> Observation details </b></h1>'
+                for(let i =0; i<info["ISRO details"].length; i=i+1)
+                {
+                    let element = '<div><h1 class="title" id="celest_coords" style="font-size:26px"><b>Serial No. ' +info["ISRO details"][i]["Serial Number"]+ '</b></h1>'
+                    element+= '<p>&#127756; Observation Timestamp: '+ info["ISRO details"][i]["Observation_Timestamp"]+'</p>'
+                    element+= '<p>&#127756; Proposal-ID: '+info["ISRO details"][i]["Proposal_ID"]+'</p>'
+                    element+= '<p>&#127756; Target-ID: '+info["ISRO details"][i]["Target_ID"]+'</p>'
+                    element+= '<p>&#127756; Right Ascension: '+info["ISRO details"][i]["RA"]+'</p>'
+                    element+= '<p>&#127756; Declination:  '+info["ISRO details"][i]["Dec"]+'</p>'
+                    element+= '<p>&#127756; Observation-ID:  '+info["ISRO details"][i]["Observation_ID"]+'</p>'
+                    element+= '<p>&#127756; Source Name: '+info["ISRO details"][i]["Source_Name"]+'</p>'
+                    element+= '<p>&#127756; Prime-Instrument:  '+info["ISRO details"][i]["Prime_Instrument"]+'</p>'
+                    element+= '<br></div>'
+                    obs_details.innerHTML += element;
+                }
+
+            }
+                       
             canvas.style.filter = "blur(3px)"
             modal.style.visibility = "visible";
             modal.style.opacity = 1;
@@ -496,7 +541,6 @@ const tick = () =>
     }
     }
     
-
 
     // Render
     renderer.render(scene, camera)
