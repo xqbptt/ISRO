@@ -287,13 +287,19 @@ document.addEventListener('click', (event) => {
                 url2.href = info["URL 2"]
                 pub2.innerHTML = info["Title 2"]
             }
-            modal.style.display = "block";
+            canvas.style.filter = "blur(3px)"
+            modal.style.visibility = "visible";
+            modal.style.opacity = 1;
             span.onclick = function() {
-                modal.style.display = "none";
+                modal.style.opacity = 0;
+                modal.style.visibility = "hidden";
+                canvas.style.filter = "blur(0px)"
             }
             window.onclick = function(event) {
                 if (event.target == modal) {
-                    modal.style.display = "none";
+                    modal.style.opacity = 0;
+                    modal.style.visibility = "hidden";
+                    canvas.style.filter = "blur(0px)"
                 }
             }
         }
