@@ -22,7 +22,7 @@ html, body{
   position:fixed;
   top:0;
   left:0;
-  transition: linear filter 1s;
+  transition: linear filter 0.3s;
   outline:none;
   z-index: -1;
 }
@@ -45,11 +45,11 @@ html, body{
     color: white;
   }
 
-  /* TOGGLE BUTTON */
+  /* TOGGLE VIEW BUTTON */
   #center {
     position: absolute;
-    right: 60px;
-    top: 10px; 
+    right: 30px;
+    top: 30px; 
     width: 70px;
     height: 40px;
     background: #2d3436;
@@ -85,7 +85,7 @@ html, body{
     position: absolute;
     right: 30px;
     top: 100px; 
-    width: 227px;
+    width: 160px;
     height: 40px;
     background: crimson;
     border-radius: 40px;
@@ -115,8 +115,8 @@ html, body{
   #le-button {
     position: absolute;
     right: 30px;
-    top: 200px; 
-    width: 227px;
+    top: 220px; 
+    width: 160px;
     font-weight: bold;
     height: 40px;
     background: lightseagreen;
@@ -147,8 +147,8 @@ html, body{
   #nobs-he-button {
     position: absolute;
     right: 30px;
-    top: 150px; 
-    width: 227px;
+    top: 160px; 
+    width: 160px;
     font-weight: bold;
     height: 40px;
     background: rgb(84, 36, 138);
@@ -180,8 +180,8 @@ html, body{
   #nobs-le-button {
     position: absolute;
     right: 30px;
-    top: 250px; 
-    width: 227px;
+    top: 280px; 
+    width: 160px;
     font-weight: bold;
     height: 40px;
     background: rgb(125, 156, 38);
@@ -344,7 +344,7 @@ html, body{
 #container .search {
   position: absolute;
   margin: auto;
-  top: 10px;
+  top: 30px;
   left: 50px;
   width: 50px;
   height: 50px;
@@ -361,11 +361,11 @@ html, body{
   content: "";
   position: absolute;
   margin: auto;
-  top: 10px;
+  top: 17px;
   right: 0;
   bottom: 0;
-  left: 10px;
-  width: 7px;
+  left: 12px;
+  width: 11px;
   height: 2px;
   background: white;
   transform: rotate(45deg);
@@ -390,8 +390,8 @@ html, body{
   font-size: 20px;
   position: absolute;
   margin: auto;
-  top: 10px;
-  left: 10px;
+  top: 30px;
+  left: 30px;
   width: 50px;
   height: 50px;
   outline: none;
@@ -399,7 +399,7 @@ html, body{
   background: #2d3436;
   color: white;
   text-shadow: 0 0 10px #2d3436;
-  padding: 0 80px 0 20px;
+  padding: 0 70px 0 20px;
   border-radius: 30px;
   /* box-shadow: 0 0 25px 0 #2d3436, 0 20px 25px 0 rgba(0, 0, 0, 0.2); */
   transition: all 1s;
@@ -440,10 +440,4 @@ html, body{
   color: white;
   opacity: 0.5;
   font-weight: bolder;
-}
-#container search-btn {
-  position: absolute;
-  height: 50px;
-  left: 420px
-
 }

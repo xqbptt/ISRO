@@ -291,14 +291,14 @@ document.addEventListener('click', (event) => {
             modal.style.visibility = "visible";
             modal.style.opacity = 1;
             span.onclick = function() {
-                modal.style.opacity = 0;
                 modal.style.visibility = "hidden";
+                modal.style.opacity = 0;
                 canvas.style.filter = "blur(0px)"
             }
             window.onclick = function(event) {
                 if (event.target == modal) {
-                    modal.style.opacity = 0;
                     modal.style.visibility = "hidden";
+                    modal.style.opacity = 0;
                     canvas.style.filter = "blur(0px)"
                 }
             }
