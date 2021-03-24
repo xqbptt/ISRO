@@ -26,6 +26,11 @@ if you've installed it using above method then just use `npm start` to start the
 
 Then open [http://localhost:3000/](http://localhost:3000/) to see your app.<br>
 
+### Note - Credentials for admin login
+
+- username - admin
+- password - password
+
 To see our work and experience it on internet please visit [https://isro-visualization-tool.herokuapp.com/](https://isro-visualization-tool.herokuapp.com/)
 
 <p align='center'>
