@@ -1,0 +1,2 @@
+Observation Name,Name,ISRO Observed,X-ray type,RA (h),RA (min),RA (sec),DE (deg),DE (arcmin),DE (arcsec),Galactic Longitude (deg),Galactic Lattitude (deg),Observation Type,Position Accuracy (arcsec),V (mag),B - V (mag),U - B (mag),E(B - V) (mag),Average Flux (mag),Range,Orbital Period (d),Pulse Period (s),Spectral Type,Other Name 1,Other Name 2,Title 1,URL 1,Title 2,URL 2
+SMC X-2,0053-739,TRUE,T,0,54,33.4,-73,41,4,302.6,-43.4,o,,16,-0.3,-0.5,0.03,1-7,,,,B1.5Ve,SMC X-2,,,,,
