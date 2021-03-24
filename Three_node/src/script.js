@@ -295,14 +295,12 @@ document.addEventListener('click', (event) => {
                 pub_card.style.display = "block"
                 url1.style.display = "block"
                 url1.href = info["URL 1"]
-                pub1.innerHTML = "&#10000; " +  info["Title 1"]
             }
             if(info["URL 2"] == "")
                 url2.style.display = "none"
             else{
                 url2.style.display = "block"
                 url2.href = info["URL 2"]
-                pub2.innerHTML = "&#10000; " +  info["Title 2"]
             }
 
             // Observation details
