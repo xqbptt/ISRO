@@ -3,7 +3,8 @@
     padding: 0;
 }
 body{
-    font-family: "Abel";
+    font-family: "Montserrat";
+    font-weight: 120;
 }
 html, body{
   overflow:hidden;
@@ -84,7 +85,7 @@ html, body{
     position: absolute;
     right: 30px;
     top: 100px; 
-    width: 227px;
+    width: 255px;
     height: 40px;
     background: crimson;
     border-radius: 40px;
@@ -103,7 +104,7 @@ html, body{
     height: 100%;
     background: rgb(175, 33, 62);
     color: #f1f1f1;
-    text-align: left;
+    text-align: center;
     padding-left: 30px;
     line-height: 30px;
     z-index: 2;
@@ -115,7 +116,7 @@ html, body{
     position: absolute;
     right: 30px;
     top: 200px; 
-    width: 227px;
+    width: 255px;
     font-weight: bold;
     height: 40px;
     background: lightseagreen;
@@ -135,7 +136,7 @@ html, body{
     height: 100%;
     background: rgb(4, 160, 95);
     color: #f1f1f1;
-    text-align: left;
+    text-align: center;
     padding-left: 30px;
     line-height: 30px;
     z-index: 2;
@@ -147,7 +148,7 @@ html, body{
     position: absolute;
     right: 30px;
     top: 150px; 
-    width: 227px;
+    width: 255px;
     font-weight: bold;
     height: 40px;
     background: rgb(84, 36, 138);
@@ -167,7 +168,7 @@ html, body{
     height: 100%;
     background: rgb(84, 36, 138);
     color: #f1f1f1;
-    text-align: left;
+    text-align: center;
     padding-left: 30px;
     line-height: 30px;
     z-index: 2;
@@ -180,7 +181,7 @@ html, body{
     position: absolute;
     right: 30px;
     top: 250px; 
-    width: 227px;
+    width: 255px;
     font-weight: bold;
     height: 40px;
     background: rgb(125, 156, 38);
@@ -200,7 +201,7 @@ html, body{
     height: 100%;
     background: yellowgreen;
     color: #f1f1f1;
-    text-align: left;
+    text-align: center;
     padding-left: 30px;
     line-height: 30px;
     z-index: 2;
@@ -242,7 +243,7 @@ html, body{
     padding: 20px;
   
     width: 40%; /* Could be more or less, depending on screen size */
-    border-radius: 8px !important;
+    border-radius: 0px !important;
   }
   
   /* The Close Button */
@@ -278,23 +279,28 @@ html, body{
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #2d3436;
+    background-color: #0f0f0f;
     background-clip: border-box;
     color: white;
-    border: 1px solid #2d3436;
-    border-radius: 40px;
+    border: 1px solid #067ea0;
+    border-radius: 15px;
     -webkit-box-shadow: 0px 0px 5px 0px rgb(0, 40, 40);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0, 50, 50, 1);
     box-shadow: 0px 0px 5px 0px rgb(0, 60, 64)
 }
 
 .card .card-body {
-    padding: 1rem 1rem
+    padding: 1rem 1rem;
+    line-height: 1.9;
+    text-align:justify;
+
 }
 
 .card-body {
     flex: 1 1 auto;
-    padding: 1.25rem
+    padding: 1.25rem;
+    line-height: 1.9;
+    text-align:justify;
 }
 
 .title {
@@ -328,7 +334,7 @@ html, body{
   padding: 10px 19px;
   cursor: pointer;
   color: #fff;
-  width: 100%
+  width: 40%
 }
 .button {
     background-color: #00bfff;
@@ -338,6 +344,13 @@ html, body{
     font-weight:bold;
     border-radius:5px;
     cursor:pointer;
+    width: 60%;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 /* SEARCH BUTTON */
