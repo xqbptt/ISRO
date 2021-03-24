@@ -21,7 +21,9 @@ img {
   height:30px;
   right:20px;
   top:20px;
+  cursor: pointer;
 }
+
 #container { /* makes this the origin of its children */
   width: 100%;
   height: 100%;
