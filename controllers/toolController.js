@@ -1,16 +1,12 @@
 const fs = require("fs");
 const util = require("util");
 const path = require("path");
+const dirname = require("../dirname");
+
 const readPromise = util.promisify(fs.readFile);
 
 exports.toolController = (req, res) => {
-  const toolNo = req.params.visualizerName;
-  const vizNo = {
-    1: "One",
-    2: "Two",
-    3: "Three",
-  };
-  res.render(`visualizer${vizNo[toolNo]}`);
+  res.render("index");
 };
 
 exports.jsonSendingController = async (req, res) => {
