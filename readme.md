@@ -3,7 +3,7 @@
 <img alt="Logo" align="right" src="https://isro-visualization-tool.herokuapp.com/vectors/isro_logo.svg" width="20%" />
 
 
-- [Creating build in your pc](#creating-an-app) – How to create a local build of the application.
+- [Creating build in your pc](#installation) – How to create a local build of the application.
 
 AstroSat Visualizer works on all operation systems.
 
