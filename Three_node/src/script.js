@@ -82,7 +82,7 @@ const materialNormalMap = new THREE.MeshPhongMaterial( {
     map: textureLoader.load( "textures/planet/earth_atmos_4096.jpg" ),
     specularMap: textureLoader.load( "textures/planet/earth_specular_2048.jpg" ),
     lightMap: textureLoader.load( "textures/planet/earth_lights_2048.png" ),
-    wireframe: true,
+    //wireframe: true,
     transparent: true,
     opacity: 0.25,
     // y scale is negated to compensate for normal map handedness.
@@ -464,7 +464,7 @@ const tick = () =>
     // controlFrictionLikeEffect
     controls.update()
 
-
+    meshPlanet.rotation.y +=0.001
     // update the picking ray with the camera and mouse position
 	raycaster.setFromCamera( mouse, camera );
 
