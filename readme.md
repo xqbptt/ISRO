@@ -30,7 +30,7 @@ Then open [http://localhost:3000/](http://localhost:3000/) to see your app.<br>
 - username - admin
 - password - password
 
-To see our work and experience it on internet please visit [https://isro-visualization-tool.herokuapp.com/](https://isro-visualization-tool.herokuapp.com/)
+To see our work and experience it on internet please visit [this url](https://isro-cltj.onrender.com/visualization/)
 
 <p align='center'>
 <img src='https://i.imgur.com/6KDIkl0.png' width='600' alt='npm start'>
